@@ -8,7 +8,7 @@ import requests
 from flask import Flask, jsonify, send_from_directory, request
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv('.env_SharedEnv')
 
 app = Flask(__name__, static_folder="static")
 
@@ -252,4 +252,4 @@ def api_health():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5051)
+    app.run(debug=True, port=5053)
