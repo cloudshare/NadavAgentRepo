@@ -26,7 +26,7 @@ CACHE_TTL = int(os.getenv("CACHE_TTL", "300"))  # seconds
 # ---------------------------------------------------------------------------
 _cache = {"data": None, "ts": 0}
 
-
+#stam
 def _jira_get(path, params=None):
     """Low-level Jira REST call with Basic auth."""
     url = f"{JIRA_BASE_URL}/rest/api/3/{path}"
