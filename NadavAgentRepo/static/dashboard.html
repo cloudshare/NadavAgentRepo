@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Migration - Mobilize | Executive Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <h1 id="initiative-title">AWS Migration - Mobilize</h1>
+            <div class="subtitle" id="initiative-subtitle">Loading...</div>
+        </div>
+        <div class="header-right">
+            <span class="status-badge in-progress" id="status-badge">
+                <span class="dot"></span>
+                <span id="status-text">Loading</span>
+            </span>
+            <button class="refresh-btn" id="refresh-btn" onclick="refreshData()">
+                <span class="spinner"></span>
+                &#8635; Refresh
+            </button>
+            <span class="last-updated" id="last-updated"></span>
+        </div>
+    </div>
+
+    <div class="dashboard" id="dashboard-content">
+        <!-- Loading state -->
+        <div class="loading-overlay" id="loading-state">
+            <div class="big-spinner"></div>
+            <p>Fetching live data from Jira...</p>
+        </div>
+
+        <!-- Error state (hidden by default) -->
+        <div class="error-state" id="error-state" style="display:none;">
+            <h2>Failed to load dashboard data</h2>
+            <p id="error-message"></p>
+            <button class="refresh-btn" onclick="refreshData()">&#8635; Retry</button>
+        </div>
+
+        <!-- Main content (hidden until data loads) -->
+        <div id="main-content" style="display:none;">
+
+            <!-- KPI Cards -->
+            <div class="kpi-row" id="kpi-row"></div>
+
+            <!-- Overall Progress Bar -->
+            <div class="overall-progress" id="overall-progress"></div>
+
+            <!-- Two Column: Phases + Right Panel -->
+            <div class="two-col">
+                <div class="phases-panel" id="phases-panel"></div>
+
+                <div class="right-panel">
+                    <div class="panel" id="donut-panel"></div>
+                    <div class="panel" id="team-panel"></div>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="bottom-row">
+                <div class="panel" id="risks-panel"></div>
+                <div class="panel" id="milestones-panel"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <div style="display:flex;align-items:center;">
+                    <h2 id="modal-title">Tasks</h2>
+                    <span class="task-count-badge" id="modal-count"></span>
+                </div>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table class="modal-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="key">Key <span class="sort-arrow"></span></th>
+                            <th data-sort="summary">Summary <span class="sort-arrow"></span></th>
+                            <th data-sort="status">Status <span class="sort-arrow"></span></th>
+                            <th data-sort="assignee">Assignee <span class="sort-arrow"></span></th>
+                            <th data-sort="priority">Priority <span class="sort-arrow"></span></th>
+                            <th data-sort="updated">Updated <span class="sort-arrow"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="modal-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
