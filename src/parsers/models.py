@@ -62,7 +62,7 @@ class ParsedTestSuite(BaseModel):
     """Normalized output from parsing one report file or spec file."""
 
     source_file: str
-    source_type: Literal["json_reporter", "stdout_reporter", "spec_analysis"]
+    source_type: Literal["json_reporter", "stdout_reporter", "spec_analysis", "monitoring_log"]
     tests: list[ParsedTest] = Field(default_factory=list)
     spec_analysis: Optional[ParsedSpecAnalysis] = None
     parse_warnings: list[ParseWarning] = Field(default_factory=list)
@@ -71,6 +71,7 @@ class ParsedTestSuite(BaseModel):
     failed: int = 0
     skipped: int = 0
     flaky: int = 0
+    monitoring_entries: list[dict] = Field(default_factory=list)
 
 
 class ParsedTestRun(BaseModel):
