@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-02-17)
 
 ## Current Position
 
-Phase: 2 of 5 (Parse and Ingest)
-Plan: 2 of 2 in current phase — PHASE COMPLETE
-Status: Phase 2 complete — ready for Phase 3 (Correlate and Classify)
-Last activity: 2026-02-26 — 02-02 complete (tree-sitter spec parser, monitoring parser, isolation runner)
+Phase: 3 of 5 (Knowledge Graph and Correlation)
+Plan: 1 of 2 in current phase — Plan 03-01 complete
+Status: Phase 3 in progress — 03-01 (KG JSON + loader) done, 03-02 (correlation engine) next
+Last activity: 2026-02-26 — 03-01 complete (CloudShare KG JSON with 87 endpoints/11 patterns, singleton loader)
 
-Progress: [████░░░░░░] 33.3% (4 of 12 total plans complete — Phases 1 and 2 done)
+Progress: [█████░░░░░] 41.7% (5 of 12 total plans complete — Phases 1 and 2 done, Phase 3 in progress)
 
 ## Performance Metrics
 
@@ -29,11 +29,13 @@ Progress: [████░░░░░░] 33.3% (4 of 12 total plans complete �
 |-------|-------|-------|----------|
 | 01 | 2 | 343s | 172s |
 | 02 | 2 | ~11 min | ~5.5 min |
+| 03 | 1 of 2 | ~18 min | ~18 min |
 
 **Recent Executions:**
 
 | Plan | Duration | Tasks | Files | Date |
 |------|----------|-------|-------|------|
+| Phase 03-01 | ~18 min | 2 tasks | 3 files | 2026-02-26 |
 | Phase 02 P02 | 353s | 2 tasks | 6 files | 2026-02-26 |
 | Phase 02-parse-and-ingest P01 | 5min | 2 tasks | 4 files | 2026-02-26 |
 | Phase 01 P02 | 190s | 2 tasks | 2 files | 2026-02-18 |
@@ -64,6 +66,10 @@ Recent decisions affecting current work:
 - [Phase 02-02]: tstype.language_typescript() (not tstype.typescript()) is the correct 0.23.2 grammar function name
 - [Phase 02-02]: monitoring_entries stored as list[dict] in ParsedTestSuite for Phase 3 correlation queries
 - [Phase 02-02]: Monitoring parser uses best-effort JSON -> CSV -> plain-text fallback; empty/unrecognised files become ParseWarning not exceptions
+- [Phase 03-01]: Hand-authored KG JSON — CloudShare V3 docs are HTML-only, no machine-readable OpenAPI/Swagger spec
+- [Phase 03-01]: V4/Accelerate endpoints added as low-confidence placeholders — Stoplight SPA blocks programmatic access
+- [Phase 03-01]: lru_cache on load_kg() only, not compile_failure_patterns() — list of dataclasses with compiled patterns should not be long-lived cached at module level
+- [Phase 03-01]: Schema validation runs inside load_kg() before caching — broken KG always raises ValueError, never silently caches invalid data
 
 ### Pending Todos
 
@@ -71,15 +77,15 @@ None yet.
 
 ### Blockers/Concerns
 
-- [Phase 3 flag]: CloudShare API doc format needs validation before writing the crawler — Stoplight vs raw HTML vs Swagger YAML structure unknown until tested against actual docs
+- [Phase 3 flag RESOLVED]: CloudShare V3 docs confirmed HTML-only, V4 Accelerate confirmed Stoplight SPA — KG hand-authored with V4 placeholders
 - [Phase 4 flag]: Rule engine confidence thresholds (0.8 cutoff) and flakiness baseline need calibration against real log samples
 
 ## Session Continuity
 
 Last session: 2026-02-26 (plan execution)
-Stopped at: Completed 02-02-PLAN.md — tree-sitter spec parser, monitoring parser, isolation runner, and extended parse_logs() all implemented and committed
+Stopped at: Completed 03-01-PLAN.md — CloudShare KG JSON (87 endpoints, 11 failure patterns) and singleton loader with schema validation implemented and committed
 Resume file: None
 
 ---
 *State initialized: 2026-02-17*
-*Last updated: 2026-02-26 after completing plan 02-02 (Phase 2 complete)*
+*Last updated: 2026-02-26 after completing plan 03-01 (Phase 3 in progress)*
