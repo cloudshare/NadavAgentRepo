@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-02-17)
 ## Current Position
 
 Phase: 3 of 5 (Knowledge Graph and Correlation)
-Plan: 1 of 2 in current phase — Plan 03-01 complete
-Status: Phase 3 in progress — 03-01 (KG JSON + loader) done, 03-02 (correlation engine) next
-Last activity: 2026-02-26 — 03-01 complete (CloudShare KG JSON with 87 endpoints/11 patterns, singleton loader)
+Plan: 2 of 2 in current phase — Phase 3 complete
+Status: Phase 3 complete — 03-01 (KG JSON + loader) and 03-02 (correlation engine) done. Ready for Phase 4.
+Last activity: 2026-03-01 — 03-02 complete (correlation engine: models, normalize_endpoint_path, match_endpoint_to_kg, match_error_against_patterns, correlate_test_run)
 
-Progress: [█████░░░░░] 41.7% (5 of 12 total plans complete — Phases 1 and 2 done, Phase 3 in progress)
+Progress: [██████░░░░] 50% (6 of 12 total plans complete — Phases 1, 2, and 3 done)
 
 ## Performance Metrics
 
@@ -29,12 +29,13 @@ Progress: [█████░░░░░] 41.7% (5 of 12 total plans complete �
 |-------|-------|-------|----------|
 | 01 | 2 | 343s | 172s |
 | 02 | 2 | ~11 min | ~5.5 min |
-| 03 | 1 of 2 | ~18 min | ~18 min |
+| 03 | 2 | ~33 min | ~16.5 min |
 
 **Recent Executions:**
 
 | Plan | Duration | Tasks | Files | Date |
 |------|----------|-------|-------|------|
+| Phase 03-02 | ~15 min | 2 tasks | 3 files | 2026-03-01 |
 | Phase 03-01 | ~18 min | 2 tasks | 3 files | 2026-02-26 |
 | Phase 02 P02 | 353s | 2 tasks | 6 files | 2026-02-26 |
 | Phase 02-parse-and-ingest P01 | 5min | 2 tasks | 4 files | 2026-02-26 |
@@ -70,6 +71,10 @@ Recent decisions affecting current work:
 - [Phase 03-01]: V4/Accelerate endpoints added as low-confidence placeholders — Stoplight SPA blocks programmatic access
 - [Phase 03-01]: lru_cache on load_kg() only, not compile_failure_patterns() — list of dataclasses with compiled patterns should not be long-lived cached at module level
 - [Phase 03-01]: Schema validation runs inside load_kg() before caching — broken KG always raises ValueError, never silently caches invalid data
+- [Phase 03-02]: Unmatched endpoints collected in CorrelatedTestRun.unmatched_endpoints (not silently dropped) to surface KG coverage gaps to Phase 4
+- [Phase 03-02]: Only 'unexpected' and 'flaky' tests correlated — 'expected' and 'skipped' excluded since they have no error signals
+- [Phase 03-02]: Endpoint matching uses exact match + prefix match for action sub-paths; full path segment comparison prevents false substring matches
+- [Phase 03-02]: Error text concatenates message + stack across all retry attempts — error signatures can appear in retry text, not just first_error_message
 
 ### Pending Todos
 
@@ -82,10 +87,10 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26 (plan execution)
-Stopped at: Completed 03-01-PLAN.md — CloudShare KG JSON (87 endpoints, 11 failure patterns) and singleton loader with schema validation implemented and committed
+Last session: 2026-03-01 (plan execution)
+Stopped at: Completed 03-02-PLAN.md — correlation engine (models.py, correlator.py) with full CORR-01/CORR-02 pipeline implemented and committed. Phase 3 complete.
 Resume file: None
 
 ---
 *State initialized: 2026-02-17*
-*Last updated: 2026-02-26 after completing plan 03-01 (Phase 3 in progress)*
+*Last updated: 2026-03-01 after completing plan 03-02 (Phase 3 complete)*
