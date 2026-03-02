@@ -16,9 +16,11 @@ from typing import Optional
 import anthropic
 
 from src.classifier.models import ClassificationResult
+from src.classifier.recommendations import DOMAIN_FIX_RECOMMENDATIONS, generate_rule_summary
 from src.classifier.rule_engine import (
     LLM_UNCERTAIN_FLOOR,
     RULE_CONFIDENCE_THRESHOLD,
+    _matched_signal_names,
     run_rule_engine,
 )
 from src.knowledge_graph.models import CorrelatedTest
@@ -95,49 +97,6 @@ _CLASSIFY_TOOL: dict = {
         ],
     },
 }
-
-# ---------------------------------------------------------------------------
-# Fix recommendations for rule-engine-classified tests
-# ---------------------------------------------------------------------------
-
-_RULE_FIX_MAP: dict[str, str] = {
-    "infrastructure_instability": (
-        "Check CSC/PCS infrastructure logs for VMware ESX or storage errors; "
-        "consider adding retry logic with exponential backoff for this endpoint."
-    ),
-    "cloud_provisioning_delay": (
-        "Increase timeout threshold for async provisioning operations or add explicit "
-        "wait-for-ready polling before assertion."
-    ),
-    "auth_session_issue": (
-        "Verify auth token refresh before test; check session expiry configuration "
-        "and add token pre-warm step in beforeAll hook."
-    ),
-    "test_design_issue": (
-        "Replace fragile locators with stable data-testid attributes; "
-        "replace hard-coded waits with explicit condition polling."
-    ),
-    "race_condition": (
-        "Add mutex/lock around shared test state; use page.waitForSelector() instead "
-        "of fixed timeouts; run tests in isolation."
-    ),
-    "data_pollution": (
-        "Add teardown cleanup for test-created entities; use unique prefixes per test "
-        "run to prevent data collisions."
-    ),
-    "product_regression": (
-        "Review recent commits touching this endpoint or feature; add to regression "
-        "suite and create a bug report."
-    ),
-    "non_deterministic_ai": (
-        "Add retry with response validation; define acceptance criteria range instead "
-        "of exact match for AI-generated outputs."
-    ),
-    "uncertain": (
-        "Review full test log manually; insufficient signals for automated classification."
-    ),
-}
-
 
 # ---------------------------------------------------------------------------
 # Log context extraction
@@ -246,27 +205,17 @@ async def classify_test(
     rule_category, rule_conf = run_rule_engine(ct, pt, sa)
 
     if rule_category is not None:
-        # Count matched signals for summary paragraph
-        from src.classifier.rule_engine import SIGNALS
-
-        matching_count = sum(
-            1
-            for s in SIGNALS
-            if s.category == rule_category and s.predicate(ct, pt, sa)
-        )
+        signal_names = _matched_signal_names(ct, pt, sa)
         return ClassificationResult(
             test_title=pt.title,
             full_title=pt.full_title,
             category=rule_category,  # type: ignore[arg-type]
             probability=rule_conf,
             method="rule_engine",
-            fix_recommendation=_RULE_FIX_MAP.get(
-                rule_category, "Review test and application logs."
+            fix_recommendation=DOMAIN_FIX_RECOMMENDATIONS.get(
+                rule_category, DOMAIN_FIX_RECOMMENDATIONS["uncertain"]
             ),
-            summary_paragraph=(
-                f"Rule engine classified this test as {rule_category} with "
-                f"{rule_conf:.0%} confidence based on {matching_count} matched signal(s)."
-            ),
+            summary_paragraph=generate_rule_summary(rule_category, rule_conf, signal_names),
             reasoning_chain=[],
             tokens_used=0,
         )

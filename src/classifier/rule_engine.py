@@ -264,6 +264,25 @@ for _signal in SIGNALS:
 # ---------------------------------------------------------------------------
 
 
+def _matched_signal_names(
+    ct: CorrelatedTest,
+    pt: ParsedTest,
+    sa: Optional[ParsedSpecAnalysis],
+) -> list[str]:
+    """Return names of signals whose predicates returned True.
+
+    Used by classify_test() to pass signal names into generate_rule_summary().
+    """
+    names: list[str] = []
+    for signal in SIGNALS:
+        try:
+            if signal.predicate(ct, pt, sa):
+                names.append(signal.name)
+        except Exception:
+            pass
+    return names
+
+
 def run_rule_engine(
     ct: CorrelatedTest,
     pt: ParsedTest,
