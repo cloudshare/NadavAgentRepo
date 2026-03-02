@@ -11,6 +11,8 @@ from .rule_engine import (
     LLM_UNCERTAIN_FLOOR,
     SIGNAL_WEIGHTS,
 )
+from .llm_client import classify_test, extract_log_context, classify_with_llm
+from .cost_estimator import estimate_run_cost, print_cost_summary
 
 __all__ = [
     "ClassificationResult",
@@ -19,4 +21,9 @@ __all__ = [
     "RULE_CONFIDENCE_THRESHOLD",
     "LLM_UNCERTAIN_FLOOR",
     "SIGNAL_WEIGHTS",
+    "classify_test",
+    "extract_log_context",
+    "classify_with_llm",
+    "estimate_run_cost",
+    "print_cost_summary",
 ]
