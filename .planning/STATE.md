@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-17)
 
 **Core value:** Engineers get immediate, actionable system-level intelligence about build failures and test health — not just raw results, but synthesized root-cause hypotheses, risk scores, and prioritized next steps — delivered to Slack the moment a build finishes.
-**Current focus:** Phase 3: Correlate and Classify
+**Current focus:** Phase 4: Classification Engine and Insights
 
 ## Current Position
 
-Phase: 3 of 5 (Knowledge Graph and Correlation)
-Plan: 2 of 2 in current phase — Phase 3 complete
-Status: Phase 3 complete — 03-01 (KG JSON + loader) and 03-02 (correlation engine) done. Ready for Phase 4.
-Last activity: 2026-03-01 — 03-02 complete (correlation engine: models, normalize_endpoint_path, match_endpoint_to_kg, match_error_against_patterns, correlate_test_run)
+Phase: 4 of 5 (Classification Engine and Insights)
+Plan: 1 of 3 in current phase — 04-01 complete
+Status: Phase 4 in progress — 04-01 (classifier package: rule engine, LLM client, cost estimator) done. Ready for 04-02.
+Last activity: 2026-03-02 — 04-01 complete (src/classifier package: models, rule_engine, llm_client, cost_estimator)
 
-Progress: [██████░░░░] 50% (6 of 12 total plans complete — Phases 1, 2, and 3 done)
+Progress: [███████░░░] 58% (7 of 12 total plans complete — Phases 1, 2, 3, and 04-01 done)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: ~4 minutes
-- Total execution time: ~0.3 hours
+- Total plans completed: 5
+- Average duration: ~5 minutes
+- Total execution time: ~0.4 hours
 
 **By Phase:**
 
@@ -30,11 +30,13 @@ Progress: [██████░░░░] 50% (6 of 12 total plans complete —
 | 01 | 2 | 343s | 172s |
 | 02 | 2 | ~11 min | ~5.5 min |
 | 03 | 2 | ~33 min | ~16.5 min |
+| 04 | 1 (in progress) | 6 min | 6 min |
 
 **Recent Executions:**
 
 | Plan | Duration | Tasks | Files | Date |
 |------|----------|-------|-------|------|
+| Phase 04-01 | 6 min | 2 tasks | 5 files | 2026-03-02 |
 | Phase 03-02 | ~15 min | 2 tasks | 3 files | 2026-03-01 |
 | Phase 03-01 | ~18 min | 2 tasks | 3 files | 2026-02-26 |
 | Phase 02 P02 | 353s | 2 tasks | 6 files | 2026-02-26 |
@@ -75,6 +77,10 @@ Recent decisions affecting current work:
 - [Phase 03-02]: Only 'unexpected' and 'flaky' tests correlated — 'expected' and 'skipped' excluded since they have no error signals
 - [Phase 03-02]: Endpoint matching uses exact match + prefix match for action sub-paths; full path segment comparison prevents false substring matches
 - [Phase 03-02]: Error text concatenates message + stack across all retry attempts — error signatures can appear in retry text, not just first_error_message
+- [Phase 04-01]: Signal weights use 0.9/0.1 primary/secondary split for KG-backed categories so a single strong signal reaches RULE_CONFIDENCE_THRESHOLD independently
+- [Phase 04-01]: product_regression signals use lower weights (0.6/0.65) so catch-all absence-of-other-signals alone does NOT hit threshold — requires LLM confirmation
+- [Phase 04-01]: LLM_UNCERTAIN_FLOOR (0.6) applied inside classify_with_llm() for single enforcement point
+- [Phase 04-01]: correlation_confidence < 1.0 (no KG match) triggers sonnet escalation — more capable model for less context-rich cases
 
 ### Pending Todos
 
@@ -83,14 +89,15 @@ None yet.
 ### Blockers/Concerns
 
 - [Phase 3 flag RESOLVED]: CloudShare V3 docs confirmed HTML-only, V4 Accelerate confirmed Stoplight SPA — KG hand-authored with V4 placeholders
-- [Phase 4 flag]: Rule engine confidence thresholds (0.8 cutoff) and flakiness baseline need calibration against real log samples
+- [Phase 4 flag PARTIAL]: Rule engine confidence thresholds implemented as named constants (RULE_CONFIDENCE_THRESHOLD=0.8, LLM_UNCERTAIN_FLOOR=0.6). Initial weight calibration done; real-sample calibration still needed post-MVP.
+- [Phase 4 flag]: Flakiness baseline (SQLite tracking) not yet implemented — planned for 04-02.
 
 ## Session Continuity
 
-Last session: 2026-03-01 (plan execution)
-Stopped at: Completed 03-02-PLAN.md — correlation engine (models.py, correlator.py) with full CORR-01/CORR-02 pipeline implemented and committed. Phase 3 complete.
+Last session: 2026-03-02 (plan execution)
+Stopped at: Completed 04-01-PLAN.md — classifier package (models, rule_engine, llm_client, cost_estimator) implemented and committed.
 Resume file: None
 
 ---
 *State initialized: 2026-02-17*
-*Last updated: 2026-03-01 after completing plan 03-02 (Phase 3 complete)*
+*Last updated: 2026-03-02 after completing plan 04-01 (classifier engine core)*
