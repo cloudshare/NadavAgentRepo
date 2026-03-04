@@ -8,6 +8,9 @@ import logging
 import hmac
 import hashlib
 from fastapi import FastAPI, Request, HTTPException
+from fastapi.staticfiles import StaticFiles
+from fastapi import HTTPException as FastAPIHTTPException
+from starlette.exceptions import HTTPException as StarletteHTTPException
 from contextlib import asynccontextmanager
 
 from src.config import get_settings
@@ -17,6 +20,7 @@ from src.models import (
     WebhookResponse,
 )
 from src.queue import build_queue
+from src.dashboard_api import dashboard_router
 
 # Load settings
 settings = get_settings()
@@ -101,6 +105,10 @@ async def lifespan(app: FastAPI):
     # Check for missed builds on startup
     await build_queue.check_missed_builds()
 
+    # Initialize SQLite schema for classifier/dashboard persistence
+    from src.classifier import init_db
+    await init_db()
+
     # Log HMAC validation status once
     if not settings.webhook.secret:
         logger.warning("Webhook HMAC validation disabled — no secret configured")
@@ -121,6 +129,9 @@ app = FastAPI(
     version=settings.service.version,
     lifespan=lifespan,
 )
+
+# Include dashboard API router (must be before app.mount for static files)
+app.include_router(dashboard_router)
 
 
 @app.get("/health", response_model=HealthResponse)
@@ -216,6 +227,27 @@ async def webhook_teamcity(request: Request):
             build_id=build.buildId,
             message="Branch not in filter list"
         )
+
+
+class SPAStaticFiles(StaticFiles):
+    """Serve a React SPA with fallback to index.html for client-side routing."""
+
+    async def get_response(self, path: str, scope):
+        try:
+            return await super().get_response(path, scope)
+        except (FastAPIHTTPException, StarletteHTTPException) as ex:
+            if ex.status_code == 404:
+                return await super().get_response("index.html", scope)
+            raise ex
+
+
+# Mount LAST — StaticFiles is a catch-all; API routes must be registered first
+# NOTE: dashboard/dist/ must exist (run `npm run build` in dashboard/) before serving
+try:
+    app.mount("/", SPAStaticFiles(directory="dashboard/dist", html=True), name="spa")
+except RuntimeError:
+    # dashboard/dist/ does not exist yet (pre-build); skip mount in dev mode
+    logger.warning("dashboard/dist/ not found — SPA static files not mounted. Run 'npm run build' in dashboard/.")
 
 
 if __name__ == "__main__":
