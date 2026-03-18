@@ -227,7 +227,7 @@ def _get_data(force_refresh=False):
 # ---------------------------------------------------------------------------
 @app.route("/")
 def index():
-    return send_from_directory("static", "dashboard.html")
+    return send_from_directory("ExecutiveDashboard_Agent1/static", "dashboard.html")
 
 
 @app.route("/api/dashboard")

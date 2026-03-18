@@ -72,19 +72,21 @@ src/
 # Source: project architecture + official rule engine design patterns
 from dataclasses import dataclass
 from typing import Callable
-from src.knowledge_graph.models import CorrelatedTest
-from src.parsers.models import ParsedTest, ParsedSpecAnalysis
+from TestAnalysis.src.knowledge_graph import CorrelatedTest
+from TestAnalysis.src import ParsedTest, ParsedSpecAnalysis
 
 # Tuneable constants — calibrate against real samples per STATE.md flag
 RULE_CONFIDENCE_THRESHOLD = 0.8
 LLM_UNCERTAIN_FLOOR = 0.6
 
+
 @dataclass
 class Signal:
     name: str
-    category: str        # one of the 8 canonical labels
-    weight: float        # 0.0–1.0; sum across a category can exceed 1.0 before normalisation
+    category: str  # one of the 8 canonical labels
+    weight: float  # 0.0–1.0; sum across a category can exceed 1.0 before normalisation
     predicate: Callable[[CorrelatedTest, ParsedTest, "ParsedSpecAnalysis | None"], bool]
+
 
 # Example signal definitions (partial list)
 SIGNALS: list[Signal] = [
@@ -130,9 +132,9 @@ SIGNALS: list[Signal] = [
 
 
 def run_rule_engine(
-    ct: CorrelatedTest,
-    pt: ParsedTest,
-    sa: "ParsedSpecAnalysis | None",
+        ct: CorrelatedTest,
+        pt: ParsedTest,
+        sa: "ParsedSpecAnalysis | None",
 ) -> tuple[str | None, float]:
     """Return (category, confidence) or (None, 0.0) if below threshold.
 

@@ -1,1 +1,0 @@
-# QA Intelligence Agent package

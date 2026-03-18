@@ -43,6 +43,7 @@ Progress: [███████░░░] 58% (7 of 12 total plans complete —
 | Phase 02-parse-and-ingest P01 | 5min | 2 tasks | 4 files | 2026-02-26 |
 | Phase 01 P02 | 190s | 2 tasks | 2 files | 2026-02-18 |
 | Phase 01 P01 | 153s | 2 tasks | 7 files | 2026-02-18 |
+| Phase 05-dashboard P01 | 5 | 2 tasks | 15 files |
 
 ## Accumulated Context
 
@@ -81,6 +82,9 @@ Recent decisions affecting current work:
 - [Phase 04-01]: product_regression signals use lower weights (0.6/0.65) so catch-all absence-of-other-signals alone does NOT hit threshold — requires LLM confirmation
 - [Phase 04-01]: LLM_UNCERTAIN_FLOOR (0.6) applied inside classify_with_llm() for single enforcement point
 - [Phase 04-01]: correlation_confidence < 1.0 (no KG match) triggers sonnet escalation — more capable model for less context-rich cases
+- [Phase 05-dashboard]: SPAStaticFiles wrapped in try/except so server starts cleanly before npm run build is run
+- [Phase 05-dashboard]: Pipeline loads KG internally (lru_cache handles caching); correlate_test_run called with correct 3-arg signature
+- [Phase 05-dashboard]: react-router v7 unified package — all imports use 'react-router' not 'react-router-dom'
 
 ### Pending Todos
 

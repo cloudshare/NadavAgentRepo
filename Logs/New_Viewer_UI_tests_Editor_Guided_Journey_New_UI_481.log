@@ -1,0 +1,813 @@
+Build 'AutomaticTestingPlaywright / Intg / Suits / New Viewer UI tests / Editor: Guided Journey New UI' #481, default branch 'main'
+Triggered 2026-02-25 03:00:11 by 'Snapshot dependency; Schedule Trigger; AutomaticTestingPlaywright / Intg / Nightly, build #249'
+Started 2026-02-25 03:05:00 on agent 'tc-ubu-22-63'
+Finished 2026-02-25 03:10:35 with status FAILURE 'Tests failed: 1 (1 new), passed: 0'
+VCS revisions: 'AutomaticTesting' (Git, instance id 358): '7a37c9a9bcccf88a43b29509e9a060d5659961a1' (branch: 'refs/heads/main')
+TeamCity URL https://tc.cloudshare.com/buildConfiguration/AutomaticTestingPlaywright_Intg_Suits_NewUiTests_EditorGuidedJourneyNewUi/4604539 
+TeamCity server version is 2024.03.3 (build 156364), server timezone: IST (UTC+02:00)
+
+[03:00:11]E: bt4233 (10m:24s)
+[03:00:11]i: TeamCity server version is 2024.03.3 (build 156364)
+[03:00:11] : Finalize build settings
+[03:00:11] : Collecting changes in 1 VCS root
+[03:00:11] :	 [Collecting changes in 1 VCS root] VCS Root details
+[03:00:11] :		 [VCS Root details] "AutomaticTesting" {instance id=358, parent internal id=172, parent id=AutomaticTesting, description: "github.com:cloudshare/AutomaticTesting#refs/heads/main"}
+[03:00:11]i:	 [Collecting changes in 1 VCS root] Loading current repository state for VCS root 'AutomaticTesting'
+[03:00:11]i:	 [Collecting changes in 1 VCS root] Detecting changes in VCS root 'AutomaticTesting' (used in 'Accelerate user creation', 'Accelerate user creation' and 148 other configurations)
+[03:00:11]i:	 [Collecting changes in 1 VCS root] Will collect changes for 'AutomaticTesting' starting from revision 7a37c9a9bcccf88a43b29509e9a060d5659961a1
+[03:00:11] :	 [Collecting changes in 1 VCS root] Compute revision for 'AutomaticTesting'
+[03:00:11] :		 [Compute revision for 'AutomaticTesting'] Upper limit revision: 7a37c9a9bcccf88a43b29509e9a060d5659961a1
+[03:00:11]i:		 [Compute revision for 'AutomaticTesting'] MaxModId = 310806
+[03:00:11] :		 [Compute revision for 'AutomaticTesting'] The latest VCS commit reachable from the 7a37c9a9bcccf88a43b29509e9a060d5659961a1 is: 7a37c9a9bcccf88a43b29509e9a060d5659961a1
+[03:00:11] :		 [Compute revision for 'AutomaticTesting'] Computed revision: 7a37c9a9bcccf88a43b29509e9a060d5659961a1
+[03:05:00] : The build is removed from the queue to be prepared for the start
+[03:05:00] : Starting the build on the agent "tc-ubu-22-63"
+[03:05:00]i: Agent time zone: America/New_York
+[03:05:00]i: Agent is running under JRE: 11.0.19+7-post-Ubuntu-0ubuntu122.10.1
+[03:05:00] : Free disk space requirement (8s)
+[03:05:00] :	 [Free disk space requirement] Removing files to meet 3 GB of free disk space required for directory /home/sysadmin/BuildAgent/temp (only 1.47 GB is free now).
+[03:05:00] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.47 GB, required 3 GB. Will continue cleaning.
+[03:05:00] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.47 GB, required 3 GB. Will continue cleaning.
+[03:05:00] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.47 GB, required 3 GB. Will continue cleaning.
+[03:05:00] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.47 GB, required 3 GB. Will continue cleaning.
+[03:05:00] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.47 GB, required 3 GB. Will continue cleaning.
+[03:05:01] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.47 GB, required 3 GB. Will continue cleaning.
+[03:05:01] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.47 GB, required 3 GB. Will continue cleaning.
+[03:05:01] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.47 GB, required 3 GB. Will continue cleaning.
+[03:05:02] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.47 GB, required 3 GB. Will continue cleaning.
+[03:05:03] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.51 GB, required 3 GB. Will continue cleaning.
+[03:05:05] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 1.91 GB, required 3 GB. Will continue cleaning.
+[03:05:05] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 2.01 GB, required 3 GB. Will continue cleaning.
+[03:05:05] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 2.05 GB, required 3 GB. Will continue cleaning.
+[03:05:05] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 2.05 GB, required 3 GB. Will continue cleaning.
+[03:05:05] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 2.05 GB, required 3 GB. Will continue cleaning.
+[03:05:05] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 2.05 GB, required 3 GB. Will continue cleaning.
+[03:05:05] :	 [Free disk space requirement] Free disk space under directory /home/sysadmin/BuildAgent/temp is 2.05 GB, required 3 GB. Will continue cleaning.
+[03:05:08] :	 [Free disk space requirement] Free disk space requirement of 3 GB is met for directory /home/sysadmin/BuildAgent/temp (4.59 GB is free)
+[03:05:08] : Updating tools for build
+[03:05:08] :	 [Updating tools for build] Found 1 tool used by the build: allure-2.24.1
+[03:05:08] :	 [Updating tools for build] All used tools are up-to-date
+[03:05:08] : Clearing temporary directory: /home/sysadmin/BuildAgent/temp/buildTmp
+[03:05:09]i: Container monitor started with command: /bin/sh -c "docker events --format "{{json .}}""
+[03:05:09] : Publishing internal artifacts
+[03:05:09] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[03:05:09] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[03:05:09]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[03:05:09] : Full checkout enforced. Reason: [Checkout directory is empty or doesn't exist]
+[03:05:09] : Will perform clean checkout. Reason: Checkout directory is empty or doesn't exist
+[03:05:09] : Checkout directory: /home/sysadmin/BuildAgent/work/20396dbc80e602e0
+[03:05:09] : Updating sources: auto checkout (on agent) (3s)
+[03:05:09] :	 [Updating sources] Will use agent side checkout
+[03:05:09] :	 [Updating sources] VCS Root: AutomaticTesting (3s)
+[03:05:09] :		 [VCS Root: AutomaticTesting] revision: 7a37c9a9bcccf88a43b29509e9a060d5659961a1
+[03:05:09]i:		 [VCS Root: AutomaticTesting] Mirrors enabled via VCS root settings
+[03:05:09] :		 [VCS Root: AutomaticTesting] Git version: 2.37.2.0
+[03:05:09] :		 [VCS Root: AutomaticTesting] Update git mirror (/home/sysadmin/BuildAgent/system/git/git-60079DD4.git) (1s)
+[03:05:09] :			 [Update git mirror (/home/sysadmin/BuildAgent/system/git/git-60079DD4.git)] /usr/bin/git config http.sslCAInfo
+[03:05:09] :			 [Update git mirror (/home/sysadmin/BuildAgent/system/git/git-60079DD4.git)] /usr/bin/git show-ref
+[03:05:09] :			 [Update git mirror (/home/sysadmin/BuildAgent/system/git/git-60079DD4.git)] /usr/bin/git -c credential.helper= -c credential.helper=/home/sysadmin/BuildAgent/temp/buildTmp/credHelper18049980681299177307.sh ls-remote origin
+[03:05:10] :			 [Update git mirror (/home/sysadmin/BuildAgent/system/git/git-60079DD4.git)] /usr/bin/git show-ref refs/heads/main
+[03:05:10] :			 [Update git mirror (/home/sysadmin/BuildAgent/system/git/git-60079DD4.git)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 7a37c9a9bcccf88a43b29509e9a060d5659961a1 --
+[03:05:10] :			 [Update git mirror (/home/sysadmin/BuildAgent/system/git/git-60079DD4.git)] No 'git fetch' required: commit '7a37c9a9bcccf88a43b29509e9a060d5659961a1' is in the local repository clone pointed by 'refs/heads/main'.
+[03:05:10] :			 [Update git mirror (/home/sysadmin/BuildAgent/system/git/git-60079DD4.git)] /usr/bin/git pack-refs --all
+[03:05:10] :		 [VCS Root: AutomaticTesting] Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0) (1s)
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] The .git directory is missing in '/home/sysadmin/BuildAgent/work/20396dbc80e602e0'. Running 'git init'...
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git init --initial-branch=main
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git config lfs.storage /home/sysadmin/BuildAgent/system/git/git-60079DD4.git/lfs
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git config core.sparseCheckout true
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git config http.sslCAInfo
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git show-ref
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git show-ref refs/remotes/origin/main
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git log -n1 --pretty=format:%H%x20%s 7a37c9a9bcccf88a43b29509e9a060d5659961a1 --
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] No 'git fetch' required: commit '7a37c9a9bcccf88a43b29509e9a060d5659961a1' is in the local repository clone pointed by 'refs/remotes/origin/main'.
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git branch
+[03:05:10] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git -c credential.helper= -c credential.helper=/home/sysadmin/BuildAgent/temp/buildTmp/credHelper15938417939409850468.sh reset --hard 7a37c9a9bcccf88a43b29509e9a060d5659961a1
+[03:05:12]i:			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] Updating files:  99% (1954/1968)
+[03:05:12]i:			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] Updating files: 100% (1968/1968)
+[03:05:12]i:			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] Updating files: 100% (1968/1968), done.
+[03:05:12] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git branch --set-upstream-to=refs/remotes/origin/main
+[03:05:12] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] Cleaning AutomaticTesting in /home/sysadmin/BuildAgent/work/20396dbc80e602e0 the file set ALL_UNTRACKED
+[03:05:12] :			 [Update checkout directory (/home/sysadmin/BuildAgent/work/20396dbc80e602e0)] /usr/bin/git clean -f -d -x
+[03:05:12] : Build preparation done
+[03:05:12]E: Step 1/3: Node version (Node.js) (5m:16s)
+[03:05:12]i:	 [Step 1/3] Docker wrapper: setting permissions for '/home/sysadmin/BuildAgent/temp/buildTmp' and '/home/sysadmin/BuildAgent/work/20396dbc80e602e0' to 1777
+[03:05:12] :	 [Step 1/3] Ant JUnit report watcher
+[03:05:12] :		 [Ant JUnit report watcher] Watching paths:
+[03:05:12] :		 [Ant JUnit report watcher] /home/sysadmin/BuildAgent/work/20396dbc80e602e0/test-results/results.xml
+[03:05:12] :	 [Step 1/3] Running step within container mcr.microsoft.com/playwright:v1.53.1-noble
+[03:05:12]i:	 [Step 1/3] Container wrapper: prepare reusable container (54s)
+[03:05:12] :		 [Container wrapper: prepare reusable container] pull mcr.microsoft.com/playwright:v1.53.1-noble (53s)
+[03:05:12] :			 [pull mcr.microsoft.com/playwright:v1.53.1-noble] Starting: docker pull mcr.microsoft.com/playwright:v1.53.1-noble
+[03:06:05] :			 [pull mcr.microsoft.com/playwright:v1.53.1-noble] v1.53.1-noble: Pulling from playwright
+f90c8eb4724c: Pulling fs layer
+27fb37cf1b0b: Pulling fs layer
+d17eb6a5d76a: Pulling fs layer
+a736a17ad708: Pulling fs layer
+a736a17ad708: Waiting
+f90c8eb4724c: Verifying Checksum
+f90c8eb4724c: Download complete
+d17eb6a5d76a: Verifying Checksum
+d17eb6a5d76a: Download complete
+27fb37cf1b0b: Verifying Checksum
+27fb37cf1b0b: Download complete
+f90c8eb4724c: Pull complete
+27fb37cf1b0b: Pull complete
+d17eb6a5d76a: Pull complete
+a736a17ad708: Verifying Checksum
+a736a17ad708: Download complete
+a736a17ad708: Pull complete
+Digest: sha256:cf7c341e04c9cf6c4c11a57ad5bcd295ebad2d35abda08c0687e28fe0a62ce49
+Status: Downloaded newer image for mcr.microsoft.com/playwright:v1.53.1-noble
+mcr.microsoft.com/playwright:v1.53.1-noble
+
+[03:06:05] :			 [pull mcr.microsoft.com/playwright:v1.53.1-noble] Process exited with code 0
+[03:06:05]i:		 [Container wrapper: prepare reusable container] Environment variable values which include following directories will be updated:
+/home/sysadmin/BuildAgent/lib => /home/sysadmin/BuildAgent/lib
+/home/sysadmin/BuildAgent/tools => /home/sysadmin/BuildAgent/tools
+/home/sysadmin/BuildAgent/plugins => /home/sysadmin/BuildAgent/plugins
+/home/sysadmin/BuildAgent/work/20396dbc80e602e0 => /home/sysadmin/BuildAgent/work/20396dbc80e602e0
+/home/sysadmin/BuildAgent/temp/agentTmp => /home/sysadmin/BuildAgent/temp/agentTmp
+/home/sysadmin/BuildAgent/temp/buildTmp => /home/sysadmin/BuildAgent/temp/buildTmp
+/home/sysadmin/BuildAgent/system => /home/sysadmin/BuildAgent/system
+[03:06:05]i:		 [Container wrapper: prepare reusable container] Container environment source: 
+export SHARED_ENV_USER_PASSWORD="*******"
+export SHARED_ENV_PM_API_KEY="*******"
+export TEAMCITY_BUILDCONF_NAME="Editor: Guided Journey New UI"
+export TEAMCITY_BUILD_PROPERTIES_FILE="/home/sysadmin/BuildAgent/temp/buildTmp/teamcity.build.parameters"
+export EMAIL_ADDRESS_ROOT="auto-root@itstructures.com"
+export TEST_ENVIRONMENT="WEBINTG"
+export RBAC_USERS_PASSWORD=""
+export API_KEY="*******"
+export EMAIL_ADDRESS="e2e-project-manager-best@cloudshare.com"
+export EMAIL_PASSWORD="*******"
+export CHANNELS_ACM_PASSWORD="*******"
+export EMAIL_PASSWORD_ROOT="*******"
+export TEAMCITY_VERSION="2024.03.3 (build 156364)"
+export BUILD_VCS_NUMBER="7a37c9a9bcccf88a43b29509e9a060d5659961a1"
+export SLACK_WEBHOOK_URL_PREPROD_DEPLOYMENT="*******"
+export CHANNELS_PMA_PASSWORD="*******"
+export TMPDIR="/home/sysadmin/BuildAgent/temp/buildTmp"
+export SHARED_ENV_PM_API_ID="*******"
+export TEAMCITY_PROJECT_NAME="New Viewer UI tests"
+export UID="0"
+export TEMP="/home/sysadmin/BuildAgent/temp/buildTmp"
+export BUILD_VCS_NUMBER_AutomaticTesting="7a37c9a9bcccf88a43b29509e9a060d5659961a1"
+export BUILD_NUMBER="481"
+export API_ID="*******"
+export BUILD_URL="https://tc.cloudshare.com/build/4604539"
+export yarn_token="\*\*\*\*\*\*\*"
+export SANITY_REGION_NAME="CloudShare / US East (Miami)"
+export TMP="/home/sysadmin/BuildAgent/temp/buildTmp"
+export ACCELERATE_USER_PASSWORD="*******"
+export TEAMCITY_CAPTURE_ENV="\"/usr/lib/jvm/java-11-openjdk-amd64/bin/java\" -jar \"/home/sysadmin/BuildAgent/plugins/environment-fetcher/lib/environment-fetcher-bin-2024.03-156364-jar-with-dependencies.jar\""
+
+[03:06:05]i:		 [Container wrapper: prepare reusable container] Container environment (--env-file): 
+SHARED_ENV_USER_PASSWORD
+SHARED_ENV_PM_API_KEY
+EMAIL_ADDRESS_ROOT
+TEAMCITY_BUILDCONF_NAME
+TEAMCITY_BUILD_PROPERTIES_FILE
+TEST_ENVIRONMENT
+RBAC_USERS_PASSWORD
+API_KEY
+EMAIL_ADDRESS
+EMAIL_PASSWORD
+CHANNELS_ACM_PASSWORD
+EMAIL_PASSWORD_ROOT
+TEAMCITY_VERSION
+BUILD_VCS_NUMBER
+SLACK_WEBHOOK_URL_PREPROD_DEPLOYMENT
+CHANNELS_PMA_PASSWORD
+TMPDIR
+SHARED_ENV_PM_API_ID
+UID
+TEAMCITY_PROJECT_NAME
+TEMP
+BUILD_NUMBER
+BUILD_VCS_NUMBER_AutomaticTesting
+BUILD_URL
+API_ID
+yarn_token
+TMP
+SANITY_REGION_NAME
+ACCELERATE_USER_PASSWORD
+TEAMCITY_CAPTURE_ENV
+
+[03:06:05] :		 [Container wrapper: prepare reusable container] Starting: . /home/sysadmin/BuildAgent/temp/agentTmp/docker-wrapper-1312135875422426104.sh && docker run --rm -w /home/sysadmin/BuildAgent/work/20396dbc80e602e0 --label jetbrains.teamcity.buildId=4604539 -id -v "/home/sysadmin/BuildAgent/lib:/home/sysadmin/BuildAgent/lib:ro" -v "/home/sysadmin/BuildAgent/tools:/home/sysadmin/BuildAgent/tools:ro" -v "/home/sysadmin/BuildAgent/plugins:/home/sysadmin/BuildAgent/plugins:ro" -v "/home/sysadmin/BuildAgent/work/20396dbc80e602e0:/home/sysadmin/BuildAgent/work/20396dbc80e602e0" -v "/home/sysadmin/BuildAgent/temp/agentTmp:/home/sysadmin/BuildAgent/temp/agentTmp" -v "/home/sysadmin/BuildAgent/temp/buildTmp:/home/sysadmin/BuildAgent/temp/buildTmp" -v "/home/sysadmin/BuildAgent/system:/home/sysadmin/BuildAgent/system" --env-file /home/sysadmin/BuildAgent/temp/agentTmp/docker-wrapper-15133045002343616305.envList --entrypoint /bin/sh "mcr.microsoft.com/playwright:v1.53.1-noble"
+[03:06:06]i:		 [Container wrapper: prepare reusable container] Container event: {"status":"pull","id":"mcr.microsoft.com/playwright:v1.53.1-noble","Type":"image","Action":"pull","Actor":{"ID":"mcr.microsoft.com/playwright:v1.53.1-noble","Attributes":{"name":"mcr.microsoft.com/playwright","org.opencontainers.image.ref.name":"ubuntu","org.opencontainers.image.version":"24.04"}},"scope":"local","time":1771981565,"timeNano":1771981565952885254}
+[03:06:06]i:		 [Container wrapper: prepare reusable container] Container event: {"status":"create","id":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","from":"mcr.microsoft.com/playwright:v1.53.1-noble","Type":"container","Action":"create","Actor":{"ID":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","Attributes":{"image":"mcr.microsoft.com/playwright:v1.53.1-noble","jetbrains.teamcity.buildId":"4604539","name":"peaceful_feistel","org.opencontainers.image.ref.name":"ubuntu","org.opencontainers.image.version":"24.04"}},"scope":"local","time":1771981566,"timeNano":1771981566232294032}
+[03:06:06]i:		 [Container wrapper: prepare reusable container] Container event: {"status":"start","id":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","from":"mcr.microsoft.com/playwright:v1.53.1-noble","Type":"container","Action":"start","Actor":{"ID":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","Attributes":{"image":"mcr.microsoft.com/playwright:v1.53.1-noble","jetbrains.teamcity.buildId":"4604539","name":"peaceful_feistel","org.opencontainers.image.ref.name":"ubuntu","org.opencontainers.image.version":"24.04"}},"scope":"local","time":1771981566,"timeNano":1771981566795447407}
+[03:06:06] :		 [Container wrapper: prepare reusable container] Process exited with code 0
+[03:06:06] :		 [Container wrapper: prepare reusable container] Successfully created a reusable container, container id = 6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0
+[03:06:06]i:	 [Step 1/3] Container wrapper: exec settings
+[03:06:06]i:		 [Container wrapper: exec settings] Environment variable values which include following directories will be updated:
+/home/sysadmin/BuildAgent/lib => /home/sysadmin/BuildAgent/lib
+/home/sysadmin/BuildAgent/tools => /home/sysadmin/BuildAgent/tools
+/home/sysadmin/BuildAgent/plugins => /home/sysadmin/BuildAgent/plugins
+/home/sysadmin/BuildAgent/work/20396dbc80e602e0 => /home/sysadmin/BuildAgent/work/20396dbc80e602e0
+/home/sysadmin/BuildAgent/temp/agentTmp => /home/sysadmin/BuildAgent/temp/agentTmp
+/home/sysadmin/BuildAgent/temp/buildTmp => /home/sysadmin/BuildAgent/temp/buildTmp
+/home/sysadmin/BuildAgent/system => /home/sysadmin/BuildAgent/system
+[03:06:06]i:		 [Container wrapper: exec settings] Container environment source: 
+export SHARED_ENV_USER_PASSWORD="*******"
+export SHARED_ENV_PM_API_KEY="*******"
+export TEAMCITY_BUILD_PROPERTIES_FILE="/home/sysadmin/BuildAgent/temp/buildTmp/teamcity.build.parameters"
+export TEAMCITY_BUILDCONF_NAME="Editor: Guided Journey New UI"
+export EMAIL_ADDRESS_ROOT="auto-root@itstructures.com"
+export TEST_ENVIRONMENT="WEBINTG"
+export RBAC_USERS_PASSWORD=""
+export API_KEY="*******"
+export EMAIL_ADDRESS="e2e-project-manager-best@cloudshare.com"
+export TEAMCITY_PROCESS_PARENT_FLOW_ID=""
+export EMAIL_PASSWORD="*******"
+export TEAMCITY_PROCESS_FLOW_ID="21060558886285123"
+export CHANNELS_ACM_PASSWORD="*******"
+export EMAIL_PASSWORD_ROOT="*******"
+export TEAMCITY_VERSION="2024.03.3 (build 156364)"
+export BUILD_VCS_NUMBER="7a37c9a9bcccf88a43b29509e9a060d5659961a1"
+export SLACK_WEBHOOK_URL_PREPROD_DEPLOYMENT="*******"
+export CHANNELS_PMA_PASSWORD="*******"
+export TMPDIR="/home/sysadmin/BuildAgent/temp/buildTmp"
+export SHARED_ENV_PM_API_ID="*******"
+export UID="0"
+export TEAMCITY_PROJECT_NAME="New Viewer UI tests"
+export BUILD_VCS_NUMBER_AutomaticTesting="7a37c9a9bcccf88a43b29509e9a060d5659961a1"
+export TEMP="/home/sysadmin/BuildAgent/temp/buildTmp"
+export BUILD_NUMBER="481"
+export BUILD_URL="https://tc.cloudshare.com/build/4604539"
+export API_ID="*******"
+export yarn_token="\*\*\*\*\*\*\*"
+export SANITY_REGION_NAME="CloudShare / US East (Miami)"
+export TMP="/home/sysadmin/BuildAgent/temp/buildTmp"
+export ACCELERATE_USER_PASSWORD="*******"
+export TEAMCITY_CAPTURE_ENV="\"/usr/lib/jvm/java-11-openjdk-amd64/bin/java\" -jar \"/home/sysadmin/BuildAgent/plugins/environment-fetcher/lib/environment-fetcher-bin-2024.03-156364-jar-with-dependencies.jar\""
+
+[03:06:06]i:		 [Container wrapper: exec settings] Container exec parameters: 
+docker exec -w /home/sysadmin/BuildAgent/work/20396dbc80e602e0 6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0 /bin/sh -c
+[03:06:06]i:		 [Container wrapper: exec settings] Container script (to be run inside container):
+#!/bin/sh
+# Created by TeamCity docker plugin
+
+export SHARED_ENV_USER_PASSWORD="*******"
+export SHARED_ENV_PM_API_KEY="*******"
+export TEAMCITY_BUILD_PROPERTIES_FILE="/home/sysadmin/BuildAgent/temp/buildTmp/teamcity.build.parameters"
+export TEAMCITY_BUILDCONF_NAME="Editor: Guided Journey New UI"
+export EMAIL_ADDRESS_ROOT="auto-root@itstructures.com"
+export TEST_ENVIRONMENT="WEBINTG"
+export RBAC_USERS_PASSWORD=""
+export API_KEY="*******"
+export EMAIL_ADDRESS="e2e-project-manager-best@cloudshare.com"
+export TEAMCITY_PROCESS_PARENT_FLOW_ID=""
+export EMAIL_PASSWORD="*******"
+export TEAMCITY_PROCESS_FLOW_ID="21060558886285123"
+export CHANNELS_ACM_PASSWORD="*******"
+export EMAIL_PASSWORD_ROOT="*******"
+export TEAMCITY_VERSION="2024.03.3 (build 156364)"
+export BUILD_VCS_NUMBER="7a37c9a9bcccf88a43b29509e9a060d5659961a1"
+export SLACK_WEBHOOK_URL_PREPROD_DEPLOYMENT="*******"
+export CHANNELS_PMA_PASSWORD="*******"
+export TMPDIR="/home/sysadmin/BuildAgent/temp/buildTmp"
+export SHARED_ENV_PM_API_ID="*******"
+export UID="0"
+export TEAMCITY_PROJECT_NAME="New Viewer UI tests"
+export BUILD_VCS_NUMBER_AutomaticTesting="7a37c9a9bcccf88a43b29509e9a060d5659961a1"
+export TEMP="/home/sysadmin/BuildAgent/temp/buildTmp"
+export BUILD_NUMBER="481"
+export BUILD_URL="https://tc.cloudshare.com/build/4604539"
+export API_ID="*******"
+export yarn_token="\*\*\*\*\*\*\*"
+export SANITY_REGION_NAME="CloudShare / US East (Miami)"
+export TMP="/home/sysadmin/BuildAgent/temp/buildTmp"
+export ACCELERATE_USER_PASSWORD="*******"
+export TEAMCITY_CAPTURE_ENV="\"/usr/lib/jvm/java-11-openjdk-amd64/bin/java\" -jar \"/home/sysadmin/BuildAgent/plugins/environment-fetcher/lib/environment-fetcher-bin-2024.03-156364-jar-with-dependencies.jar\""
+
+sh /home/sysadmin/BuildAgent/temp/buildTmp/nodejs-script-4611d51e-7377-4404-a6f8-5b40caff9d01.sh \
+
+
+[03:06:06] :	 [Step 1/3] Starting: /bin/sh -c . /home/sysadmin/BuildAgent/temp/agentTmp/docker-wrapper-16970902371001349960.sh && docker exec -w /home/sysadmin/BuildAgent/work/20396dbc80e602e0 6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0 /bin/sh -c /home/sysadmin/BuildAgent/temp/agentTmp/docker-shell-script-12230844628384365939.sh
+[03:06:06] :	 [Step 1/3] in directory: /home/sysadmin/BuildAgent/work/20396dbc80e602e0
+[03:06:06]i:	 [Step 1/3] Container event: {"status":"exec_create: /bin/sh -c /home/sysadmin/BuildAgent/temp/agentTmp/docker-shell-script-12230844628384365939.sh","id":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","from":"mcr.microsoft.com/playwright:v1.53.1-noble","Type":"container","Action":"exec_create: /bin/sh -c /home/sysadmin/BuildAgent/temp/agentTmp/docker-shell-script-12230844628384365939.sh","Actor":{"ID":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","Attributes":{"execID":"de8c0e89ecce6b64cc7d19d06c1e7c3009c835076edd87c92756702a6f8bd1c0","image":"mcr.microsoft.com/playwright:v1.53.1-noble","jetbrains.teamcity.buildId":"4604539","name":"peaceful_feistel","org.opencontainers.image.ref.name":"ubuntu","org.opencontainers.image.version":"24.04"}},"scope":"local","time":1771981566,"timeNano":1771981566943555637}
+[03:06:06]i:	 [Step 1/3] Container event: {"status":"exec_start: /bin/sh -c /home/sysadmin/BuildAgent/temp/agentTmp/docker-shell-script-12230844628384365939.sh","id":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","from":"mcr.microsoft.com/playwright:v1.53.1-noble","Type":"container","Action":"exec_start: /bin/sh -c /home/sysadmin/BuildAgent/temp/agentTmp/docker-shell-script-12230844628384365939.sh","Actor":{"ID":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","Attributes":{"execID":"de8c0e89ecce6b64cc7d19d06c1e7c3009c835076edd87c92756702a6f8bd1c0","image":"mcr.microsoft.com/playwright:v1.53.1-noble","jetbrains.teamcity.buildId":"4604539","name":"peaceful_feistel","org.opencontainers.image.ref.name":"ubuntu","org.opencontainers.image.version":"24.04"}},"scope":"local","time":1771981566,"timeNano":1771981566944306943}
+[03:06:07] :	 [Step 1/3] v22.16.0
+[03:07:24] :	 [Step 1/3] 
+[03:07:24] :	 [Step 1/3] added 597 packages, and audited 598 packages in 1m
+[03:07:24] :	 [Step 1/3] 
+[03:07:24] :	 [Step 1/3] 92 packages are looking for funding
+[03:07:24] :	 [Step 1/3]   run `npm fund` for details
+[03:07:24] :	 [Step 1/3] 
+[03:07:24] :	 [Step 1/3] 32 vulnerabilities (2 low, 5 moderate, 22 high, 3 critical)
+[03:07:24] :	 [Step 1/3] 
+[03:07:24] :	 [Step 1/3] To address issues that do not require attention, run:
+[03:07:24] :	 [Step 1/3]   npm audit fix
+[03:07:24] :	 [Step 1/3] 
+[03:07:24] :	 [Step 1/3] To address all issues (including breaking changes), run:
+[03:07:24] :	 [Step 1/3]   npm audit fix --force
+[03:07:24] :	 [Step 1/3] 
+[03:07:24] :	 [Step 1/3] Run `npm audit` for details.
+[03:07:31] :	 [Step 1/3] 
+[03:07:31] :	 [Step 1/3] Running 1 test using 1 worker
+[03:07:31] :	 [Step 1/3] [Claude Reporter] Started. Enabled: true
+[03:07:34] :	 [Step 1/3] Registered middlewares: RetryHandler, RedirectHandler, ParametersNameDecodingHandler, UserAgentHandler, HeadersInspectionHandler, UrlReplaceHandler, CustomFetchHandler
+[03:07:34] :	 [Step 1/3] Hint: To improve performance, use MiddlewareFactory.getPerformanceMiddlewares(customFetch) instead of MiddlewareFactory.getDefaultMiddlewares(customFetch)
+[03:07:34] :	 [Step 1/3] 2026-02-25T01:07:34.881Z [ [32minfo [39m]: Request Body: 
+[03:07:34] :	 [Step 1/3] {
+[03:07:34] :	 [Step 1/3]   "name": "AUTO_TEST_training_mEbE8nHlsb_25.02.26_01:07:34",
+[03:07:34] :	 [Step 1/3]   "type": "instructorLed",
+[03:07:34] :	 [Step 1/3]   "start": "2026-02-25T01:07:34.877Z",
+[03:07:34] :	 [Step 1/3]   "end": "2026-02-25T01:22:34.877Z",
+[03:07:34] :	 [Step 1/3]   "timeZone": "UTC",
+[03:07:34] :	 [Step 1/3]   "mainInstructor": {
+[03:07:34] :	 [Step 1/3]     "email": "experience.managment.e2e@gmail.com"
+[03:07:34] :	 [Step 1/3]   },
+[03:07:34] :	 [Step 1/3]   "projectId": "PR5bugMU3Zlb_5-I8rMWbv6w2",
+[03:07:34] :	 [Step 1/3]   "teamId": "TMpkLntpwM4UIwcbkFv3OV4A2",
+[03:07:34] :	 [Step 1/3]   "policyId": "POcxekPo9Xp9Om592yqIWUhA2",
+[03:07:34] :	 [Step 1/3]   "blueprintIds": [
+[03:07:34] :	 [Step 1/3]     "BPN6RyuwVXAlZuzXf55Y5_ow2"
+[03:07:34] :	 [Step 1/3]   ],
+[03:07:34] :	 [Step 1/3]   "cloudshareRegionIds": [
+[03:07:34] :	 [Step 1/3]     "REKolD1-ab84YIxODeMGob9A2"
+[03:07:34] :	 [Step 1/3]   ],
+[03:07:34] :	 [Step 1/3]   "description": "Accelerate e2e description",
+[03:07:34] :	 [Step 1/3]   "labels": [
+[03:07:34] :	 [Step 1/3]     "accelerate_e2e_label"
+[03:07:34] :	 [Step 1/3]   ],
+[03:07:34] :	 [Step 1/3]   "accessType": "passphrase",
+[03:07:34] :	 [Step 1/3]   "passphrase": "sic parvis magna",
+[03:07:34] :	 [Step 1/3]   "usersEarlyAccess": {
+[03:07:34] :	 [Step 1/3]     "earlyAccessTime": 120,
+[03:07:34] :	 [Step 1/3]     "grantEarlyAccess": "forEveryone"
+[03:07:34] :	 [Step 1/3]   },
+[03:07:34] :	 [Step 1/3]   "maxStudents": 2,
+[03:07:34] :	 [Step 1/3]   "allowMultipleEnvironmentActivations": true
+[03:07:34] :	 [Step 1/3] }
+[03:07:35] :	 [Step 1/3] 2026-02-25T01:07:35.133Z [ [32minfo [39m]: Access token was generated: 
+[03:07:35] :	 [Step 1/3] eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwidHlwIjoiSldUIn0..qac0siKPTL8PHYRldNdo0g.5Oh61trq7EPyqo7sRuN0HP3BYCKrsQtbqJb5XJtJIkpatPpS0AEWfXjcbMTd41F81Gg6tq1R_ZrSFWINcGdBTlOFDTBcNRZ5Q__LakIJ3cEvDdpkcG07yVxVCIHZs9ABgp6qOTEy3h3dYQ9_muJHd4xE1hM7TfYwnqmytvVX4kZP888vusn-OtBaYh3oO4ec2i0hUoeyFN_AsVBO6teORr4oHj9j4bgqIadjgeUUQOt7Dv31YTveIE6nfTunVppmLfiY6gYrgKrj-9__S6FFIuSEtyL3gobm0mcgikjiIAbYuCqnr595W8fh3mPfjR5-3JqkIF83b8WTmDX0j20XBQ.KcC2MutMWxynl6oy9FTkOw-uEwi-ngfAXeiYcdRrjfc
+[03:07:36] :	 [Step 1/3] 2026-02-25T01:07:36.247Z [ [32minfo [39m]: Created Training: 
+[03:07:36] :	 [Step 1/3] {
+[03:07:36] :	 [Step 1/3]   "id": "EXX1rTXbW5e1WfvL0q0kgctg2",
+[03:07:36] :	 [Step 1/3]   "name": "AUTO_TEST_training_mEbE8nHlsb_25.02.26_01:07:34",
+[03:07:36] :	 [Step 1/3]   "status": "notStarted",
+[03:07:36] :	 [Step 1/3]   "type": "instructorLed",
+[03:07:36] :	 [Step 1/3]   "accessLink": "https://webintg.il.cld.sr/Class/3iuat",
+[03:07:36] :	 [Step 1/3]   "passphrase": "sic parvis magna",
+[03:07:36] :	 [Step 1/3]   "createdBy": "experience.managment.e2e@gmail.com",
+[03:07:36] :	 [Step 1/3]   "createdDate": "2026-02-25T01:07:35.431Z",
+[03:07:36] :	 [Step 1/3]   "lastUpdatedBy": "experience.managment.e2e@gmail.com",
+[03:07:36] :	 [Step 1/3]   "lastUpdatedDate": "2026-02-25T01:07:36.040Z",
+[03:07:36] :	 [Step 1/3]   "projectId": "PR5bugMU3Zlb_5-I8rMWbv6w2",
+[03:07:36] :	 [Step 1/3]   "teamId": "TMpkLntpwM4UIwcbkFv3OV4A2",
+[03:07:36] :	 [Step 1/3]   "blueprintIds": [
+[03:07:36] :	 [Step 1/3]     "BPN6RyuwVXAlZuzXf55Y5_ow2"
+[03:07:36] :	 [Step 1/3]   ],
+[03:07:36] :	 [Step 1/3]   "mainInstructor": {
+[03:07:36] :	 [Step 1/3]     "email": "experience.managment.e2e@gmail.com"
+[03:07:36] :	 [Step 1/3]   },
+[03:07:36] :	 [Step 1/3]   "additionalInstructors": [],
+[03:07:36] :	 [Step 1/3]   "start": "2026-02-25T01:07:34.877Z",
+[03:07:36] :	 [Step 1/3]   "end": "2026-02-25T01:22:34.877Z",
+[03:07:36] :	 [Step 1/3]   "timeZone": "UTC",
+[03:07:36] :	 [Step 1/3]   "cloudshareRegionIds": [
+[03:07:36] :	 [Step 1/3]     "REKolD1-ab84YIxODeMGob9A2"
+[03:07:36] :	 [Step 1/3]   ],
+[03:07:36] :	 [Step 1/3]   "policyId": "POcxekPo9Xp9Om592yqIWUhA2",
+[03:07:36] :	 [Step 1/3]   "maxStudents": 2,
+[03:07:36] :	 [Step 1/3]   "registrationType": "anyStudents",
+[03:07:36] :	 [Step 1/3]   "accessType": "passphrase",
+[03:07:36] :	 [Step 1/3]   "usersEarlyAccess": {
+[03:07:36] :	 [Step 1/3]     "grantEarlyAccess": "forEveryone",
+[03:07:36] :	 [Step 1/3]     "earlyAccessTime": 120
+[03:07:36] :	 [Step 1/3]   },
+[03:07:36] :	 [Step 1/3]   "description": "Accelerate e2e description",
+[03:07:36] :	 [Step 1/3]   "labels": [
+[03:07:36] :	 [Step 1/3]     "accelerate_e2e_label"
+[03:07:36] :	 [Step 1/3]   ],
+[03:07:36] :	 [Step 1/3]   "allowMultipleEnvironmentActivations": true,
+[03:07:36] :	 [Step 1/3]   "sendInvitations": "instructorsAndStudents",
+[03:07:36] :	 [Step 1/3]   "blockFreeEmailDomains": false,
+[03:07:36] :	 [Step 1/3]   "customFields": [],
+[03:07:36] :	 [Step 1/3]   "allowParticipantsSwitchSteps": false,
+[03:07:36] :	 [Step 1/3]   "useCustomInvitationEmail": false
+[03:07:36] :	 [Step 1/3] }
+[03:07:36] :	 [Step 1/3] 2026-02-25T01:07:36.247Z [ [32minfo [39m]: Training ID is = EXX1rTXbW5e1WfvL0q0kgctg2
+[03:07:39] :	 [Step 1/3] 2026-02-25T01:07:39.669Z [ [32minfo [39m]: Log in
+[03:07:43] :	 [Step 1/3] 2026-02-25T01:07:43.369Z [ [32minfo [39m]: Go to training experience
+[03:07:45] :	 [Step 1/3] 2026-02-25T01:07:45.033Z [ [32minfo [39m]: contextHolder: waiting for new tab
+[03:07:48] :	 [Step 1/3] 2026-02-25T01:07:48.188Z [ [32minfo [39m]: Go to Editor
+[03:07:49] :	 [Step 1/3] 2026-02-25T01:07:49.045Z [ [32minfo [39m]: Add Guided Journey as left menu tab
+[03:08:00] :	 [Step 1/3] 2026-02-25T01:08:00.654Z [ [32minfo [39m]: Set Guided Journey Chapter Name for Default Chapter
+[03:08:01] :	 [Step 1/3] 2026-02-25T01:08:01.991Z [ [32minfo [39m]: Add 2 Sections To Default Chapter
+[03:08:02] :	 [Step 1/3] 2026-02-25T01:08:02.094Z [ [32minfo [39m]: Go Back to Chapters List
+[03:08:02] :	 [Step 1/3] 2026-02-25T01:08:02.272Z [ [32minfo [39m]: Add Additional Guided Journey Chapter
+[03:08:13] :	 [Step 1/3] 2026-02-25T01:08:13.929Z [ [32minfo [39m]: Set Guided Journey Chapter Name for New Chapter
+[03:08:14] :	 [Step 1/3] 2026-02-25T01:08:14.392Z [ [32minfo [39m]: Add New Guided Journey Section To New Chapter
+[03:08:14] :	 [Step 1/3] 2026-02-25T01:08:14.505Z [ [32minfo [39m]: Go Back to Chapters List
+[03:08:14] :	 [Step 1/3] 2026-02-25T01:08:14.521Z [ [32minfo [39m]: Navigate to Chapter 0
+[03:08:15] :	 [Step 1/3] 2026-02-25T01:08:15.365Z [ [32minfo [39m]: Set Guided Journey Section 0 Settings in Chapter 0
+[03:08:16] :	 [Step 1/3] 2026-02-25T01:08:16.600Z [ [32minfo [39m]: Set Guided Journey Section 1 Settings in Chapter 0
+[03:08:17] :	 [Step 1/3] 2026-02-25T01:08:17.363Z [ [32minfo [39m]: Navigate to Chapter 1
+[03:08:18] :	 [Step 1/3] 2026-02-25T01:08:18.270Z [ [32minfo [39m]: Set Guided Journey Section 0 Settings in Chapter 1
+[03:08:19] :	 [Step 1/3] 2026-02-25T01:08:19.465Z [ [32minfo [39m]: Set Guided Journey Section 1 Settings in Chapter 1
+[03:08:20] :	 [Step 1/3] 2026-02-25T01:08:20.050Z [ [32minfo [39m]: Go Back to Chapters List
+[03:08:29] :	 [Step 1/3] 2026-02-25T01:08:29.930Z [ [32minfo [39m]: Add a Checkpoint to Section 1 in Chapter 0
+[03:08:32] :	 [Step 1/3] 2026-02-25T01:08:32.112Z [ [32minfo [39m]: Add a Hint to Checkpoint Section 1 in Chapter 0
+[03:08:35] :	 [Step 1/3] 2026-02-25T01:08:35.113Z [ [32minfo [39m]: Page has loaded successfully
+[03:08:38] :	 [Step 1/3] 2026-02-25T01:08:38.236Z [ [32minfo [39m]: Save Editor With Guided Journey
+[03:08:38] :	 [Step 1/3] 2026-02-25T01:08:38.695Z [ [32minfo [39m]: Clear Storage and Refresh Page
+[03:08:50] :	 [Step 1/3] 2026-02-25T01:08:50.049Z [ [32minfo [39m]: Open Guided Journey
+[03:08:50] :	 [Step 1/3] 2026-02-25T01:08:50.082Z [ [32minfo [39m]: Navigate to Chapter 0
+[03:08:50] :	 [Step 1/3] 2026-02-25T01:08:50.878Z [ [32minfo [39m]: Open and Validate Guided Journey Section 0 in Chapter 0
+[03:08:51] :	 [Step 1/3] 2026-02-25T01:08:51.458Z [ [32minfo [39m]: Open and Validate Guided Journey Section 1 in Chapter 0
+[03:08:51] :	 [Step 1/3] 2026-02-25T01:08:51.807Z [ [32minfo [39m]: Navigate to Chapter 1
+[03:08:52] :	 [Step 1/3] 2026-02-25T01:08:52.441Z [ [32minfo [39m]: Open and Validate Guided Journey Section 0 in Chapter 1
+[03:08:52] :	 [Step 1/3] 2026-02-25T01:08:52.970Z [ [32minfo [39m]: Open and Validate Guided Journey Section 1 in Chapter 1
+[03:08:53] :	 [Step 1/3] 2026-02-25T01:08:53.093Z [ [32minfo [39m]: Go Back to Chapters List
+[03:08:53] :	 [Step 1/3] 2026-02-25T01:08:53.130Z [ [32minfo [39m]: Navigate to Chapter 0
+[03:08:53] :	 [Step 1/3] 2026-02-25T01:08:53.859Z [ [32minfo [39m]: Check Section 0 in Chapter 0 has Checkpoint Icon and Screenshot Area
+[03:08:55] :	 [Step 1/3] 2026-02-25T01:08:55.012Z [ [32minfo [39m]: Check Section 1 in Chapter 0 has Checkpoint Icon and Screenshot Area
+[03:08:55] :	 [Step 1/3] 2026-02-25T01:08:55.262Z [ [32minfo [39m]: Navigate to Chapter 1
+[03:08:56] :	 [Step 1/3] 2026-02-25T01:08:56.017Z [ [32minfo [39m]: Check Section 0 in Chapter 1 has Checkpoint Icon and Screenshot Area
+[03:08:56] :	 [Step 1/3] 2026-02-25T01:08:56.694Z [ [32minfo [39m]: Check Section 1 in Chapter 1 has Checkpoint Icon and Screenshot Area
+[03:08:56] :	 [Step 1/3] 2026-02-25T01:08:56.938Z [ [32minfo [39m]: Go Back to Chapters List
+[03:09:00] :	 [Step 1/3] 2026-02-25T01:09:00.324Z [ [32minfo [39m]: Delete First Chapter
+[03:09:11] :	 [Step 1/3] 2026-02-25T01:09:11.858Z [ [32minfo [39m]: Set Guided Journey Chapter Name for First Chapter
+[03:09:13] :	 [Step 1/3] 2026-02-25T01:09:13.255Z [ [32minfo [39m]: Set Guided Journey Section 2 Settings in Chapter 0
+[03:09:13] :	 [Step 1/3] 2026-02-25T01:09:13.756Z [ [32minfo [39m]: Add a New Section to First Chapter
+[03:09:14] :	 [Step 1/3] 2026-02-25T01:09:14.667Z [ [32minfo [39m]: Set Guided Journey Section 1 Settings in Chapter 0
+[03:09:22] :	 [Step 1/3] 2026-02-25T01:09:22.462Z [ [32minfo [39m]: Add a Checkpoint to Section 1 in Chapter 0
+[03:09:24] :	 [Step 1/3] 2026-02-25T01:09:24.477Z [ [32minfo [39m]: Add a Hint to Checkpoint Section 1 in Chapter 0
+[03:09:24] :	 [Step 1/3] 2026-02-25T01:09:24.647Z [ [32minfo [39m]: Go Back to Chapters List
+[03:09:24] :	 [Step 1/3] 2026-02-25T01:09:24.752Z [ [32minfo [39m]: Expand First Chapter
+[03:09:25] :	 [Step 1/3] 2026-02-25T01:09:25.251Z [ [32minfo [39m]: Delete First Section from First Chapter
+[03:09:25] :	 [Step 1/3] 2026-02-25T01:09:25.398Z [ [32minfo [39m]: Add New Guided Journey Chapter
+[03:09:26] :	 [Step 1/3] 2026-02-25T01:09:26.965Z [ [32minfo [39m]: Set Guided Journey Chapter Name for New Chapter
+[03:09:27] :	 [Step 1/3] 2026-02-25T01:09:27.671Z [ [32minfo [39m]: Add 2 Guided Journey Sections To New Chapter
+[03:09:27] :	 [Step 1/3] 2026-02-25T01:09:27.803Z [ [32minfo [39m]: Go Back to Chapters List
+[03:09:28] :	 [Step 1/3] 2026-02-25T01:09:28.696Z [ [32minfo [39m]: Set Guided Journey Section 0 Settings in Chapter 1
+[03:09:29] :	 [Step 1/3] 2026-02-25T01:09:29.949Z [ [32minfo [39m]: Set Guided Journey Section 1 Settings in Chapter 1
+[03:09:31] :	 [Step 1/3] 2026-02-25T01:09:31.147Z [ [32minfo [39m]: Set Guided Journey Section 2 Settings in Chapter 1
+[03:09:31] :	 [Step 1/3] 2026-02-25T01:09:31.730Z [ [32minfo [39m]: Go Back to Chapters List
+[03:09:33] :	 [Step 1/3] 2026-02-25T01:09:33.016Z [ [32minfo [39m]: Set Guided Journey Section 2 Settings in Chapter 0
+[03:09:48] :	 [Step 1/3] 2026-02-25T01:09:48.311Z [ [32minfo [39m]: Page has loaded successfully
+[03:09:51] :	 [Step 1/3] 2026-02-25T01:09:51.447Z [ [32minfo [39m]: Save Editor With Guided Journey
+[03:09:51] :	 [Step 1/3] 2026-02-25T01:09:51.788Z [ [32minfo [39m]: Clear Storage and Refresh Page
+[03:10:02] :	 [Step 1/3] 2026-02-25T01:10:02.662Z [ [32minfo [39m]: Open Guided Journey
+[03:10:04] :	 [Step 1/3] 2026-02-25T01:10:04.280Z [ [32minfo [39m]: Validate Guided Journey Chapter 0
+[03:10:04] :	 [Step 1/3] 2026-02-25T01:10:04.842Z [ [32minfo [39m]: Open and Validate Guided Journey Section 0 in Chapter 0
+[03:10:05] :	 [Step 1/3] 2026-02-25T01:10:05.431Z [ [32minfo [39m]: Open and Validate Guided Journey Section 1 in Chapter 0
+[03:10:06] :	 [Step 1/3] 2026-02-25T01:10:06.088Z [ [32minfo [39m]: Open and Validate Guided Journey Section 2 in Chapter 0
+[03:10:07] :	 [Step 1/3] 2026-02-25T01:10:07.459Z [ [32minfo [39m]: Tear down action has been started: training deletion
+[03:10:07] :	 [Step 1/3] Registered middlewares: RetryHandler, RedirectHandler, ParametersNameDecodingHandler, UserAgentHandler, HeadersInspectionHandler, UrlReplaceHandler, CustomFetchHandler
+[03:10:07] :	 [Step 1/3] Hint: To improve performance, use MiddlewareFactory.getPerformanceMiddlewares(customFetch) instead of MiddlewareFactory.getDefaultMiddlewares(customFetch)
+[03:10:07] :	 [Step 1/3] 2026-02-25T01:10:07.648Z [ [32minfo [39m]: Access token was generated: 
+[03:10:07] :	 [Step 1/3] eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwidHlwIjoiSldUIn0..anTrGhi9Z4SA05Fhq50LoA.VJScHh9EubolmOdtFfNve99PgMGxkrY8Vkoq4vRxLv97VtZ1QTdxvwl5zd3Ok1c6b5POf_elbnaeSXTzOZF3j1_mHi4zALv9UfgSXGkFmz7O-r6HmYaEvOiaHAT7J0pGUZOIl5e9pytIux3hu_gZYK9uB335qn5oqZXCQVf3ArHdfdeYvjqy_7IrID6lxKhJV_4QDOBobcRSGuuN32BJVtuftv8b8LfSgDbhgq0x2fQKNExkILsO6nJxJCpqPSYhTrT-x7FOFhFGagZbbeDQKbugmhgXX4u4sB2yhIEGSIh3oG7Rt5pU8nhR9Lbl1SvqTY3H1Y-4X3Z3R6adeXmW_g.cq35uzQnXO5za0MpAdoiMmqNEz2ENfrotRS-C4FRSIQ
+[03:10:08] :	 [Step 1/3] 2026-02-25T01:10:08.554Z [ [32minfo [39m]: Training Experience AUTO_TEST_training_mEbE8nHlsb_25.02.26_01:07:34 has been deleted
+[03:10:18] :	 [Step 1/3] F
+[03:10:18] :	 [Step 1/3] 
+[03:10:18] :	 [Step 1/3]   1) [Google Chrome] › src/tests/browser/new-ui/editor-guided-journey-new-ui.spec.ts:127:3 › Editor Guided Journey Test: new viewer UI › Editor Guided Journey Test › Validate First Chapter 
+[03:10:18] :	 [Step 1/3] 
+[03:10:18] :	 [Step 1/3]     Error:  [2mexpect( [22m [31mreceived [39m [2m). [22mtoBe [2m( [22m [32mexpected [39m [2m) // Object.is equality [22m
+[03:10:18] :	 [Step 1/3] 
+[03:10:18] :	 [Step 1/3]     Expected:  [32m1 [39m
+[03:10:18] :	 [Step 1/3]     Received:  [31m0 [39m
+[03:10:18] :	 [Step 1/3] 
+[03:10:18] :	 [Step 1/3]       114 |     await sectionSettings.waitForImageLoadingDone()
+[03:10:18] :	 [Step 1/3]       115 |     const areasCount = await sectionSettings.getCheckpointAreasCount()
+[03:10:18] :	 [Step 1/3]     > 116 |     expect(areasCount).toBe(shouldHasCheckpoint ? 1 : 0)
+[03:10:18] :	 [Step 1/3]           |                        ^
+[03:10:18] :	 [Step 1/3]       117 |
+[03:10:18] :	 [Step 1/3]       118 |     const failureHintCheckbox = await sectionSettings.isFailureHintCheckboxChecked()
+[03:10:18] :	 [Step 1/3]       119 |     expect(failureHintCheckbox).toBe(shouldHasFailureHintCheckbox ? true : false)
+[03:10:18] :	 [Step 1/3]         at validateCheckpoint (/home/sysadmin/BuildAgent/work/20396dbc80e602e0/src/tests/browser/new-ui/editor-guided-journey-new-ui.spec.ts:116:24)
+[03:10:18] :	 [Step 1/3]         at /home/sysadmin/BuildAgent/work/20396dbc80e602e0/src/tests/browser/new-ui/editor-guided-journey-new-ui.spec.ts:422:7
+[03:10:18] :	 [Step 1/3]         at /home/sysadmin/BuildAgent/work/20396dbc80e602e0/src/tests/browser/new-ui/editor-guided-journey-new-ui.spec.ts:412:5
+[03:10:18] :	 [Step 1/3] 
+[03:10:18] :	 [Step 1/3]     Error Context: test-results/browser-new-ui-editor-guid-14b08--Editor-Guided-Journey-Test-Google-Chrome/error-context.md
+[03:10:18] :	 [Step 1/3] 
+[03:10:18] :	 [Step 1/3]     attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+[03:10:18] :	 [Step 1/3]     test-results/browser-new-ui-editor-guid-14b08--Editor-Guided-Journey-Test-Google-Chrome/trace.zip
+[03:10:18] :	 [Step 1/3]     Usage:
+[03:10:18] :	 [Step 1/3] 
+[03:10:18] :	 [Step 1/3]         npx playwright show-trace test-results/browser-new-ui-editor-guid-14b08--Editor-Guided-Journey-Test-Google-Chrome/trace.zip
+[03:10:18] :	 [Step 1/3] 
+[03:10:18] :	 [Step 1/3]     ────────────────────────────────────────────────────────────────────────────────────────────────
+[03:10:18] :	 [Step 1/3] 
+[03:10:18] :	 [Step 1/3]   1 failed
+[03:10:18] :	 [Step 1/3]     [Google Chrome] › src/tests/browser/new-ui/editor-guided-journey-new-ui.spec.ts:127:3 › Editor Guided Journey Test: new viewer UI › Editor Guided Journey Test 
+[03:10:18] :	 [Step 1/3] [Claude Reporter] Summary index written: /home/sysadmin/BuildAgent/work/20396dbc80e602e0/playwright-report/ai_failures_index.json
+[03:10:18] :	 [Step 1/3] [Claude Reporter] Analyzing 1 failure(s)...
+[03:10:18]F:	 [Step 1/3] browser/new-ui/editor-guided-journey-new-ui.spec.ts
+[03:10:18]F:		 [browser/new-ui/editor-guided-journey-new-ui.spec.ts] Editor Guided Journey Test: new viewer UI › Editor Guided Journey Test
+[03:10:18]i:			 [Editor Guided Journey Test: new viewer UI › Editor Guided Journey Test] [Test Output]
+Registered middlewares: RetryHandler, RedirectHandler, ParametersNameDecodingHandler, UserAgentHandler, HeadersInspectionHandler, UrlReplaceHandler, CustomFetchHandler
+Hint: To improve performance, use MiddlewareFactory.getPerformanceMiddlewares(customFetch) instead of MiddlewareFactory.getDefaultMiddlewares(customFetch)
+2026-02-25T01:07:34.881Z [[32minfo[39m]: Request Body: 
+{
+  "name": "AUTO_TEST_training_mEbE8nHlsb_25.02.26_01:07:34",
+  "type": "instructorLed",
+  "start": "2026-02-25T01:07:34.877Z",
+  "end": "2026-02-25T01:22:34.877Z",
+  "timeZone": "UTC",
+  "mainInstructor": {
+    "email": "experience.managment.e2e@gmail.com"
+  },
+  "projectId": "PR5bugMU3Zlb_5-I8rMWbv6w2",
+  "teamId": "TMpkLntpwM4UIwcbkFv3OV4A2",
+  "policyId": "POcxekPo9Xp9Om592yqIWUhA2",
+  "blueprintIds": [
+    "BPN6RyuwVXAlZuzXf55Y5_ow2"
+  ],
+  "cloudshareRegionIds": [
+    "REKolD1-ab84YIxODeMGob9A2"
+  ],
+  "description": "Accelerate e2e description",
+  "labels": [
+    "accelerate_e2e_label"
+  ],
+  "accessType": "passphrase",
+  "passphrase": "sic parvis magna",
+  "usersEarlyAccess": {
+    "earlyAccessTime": 120,
+    "grantEarlyAccess": "forEveryone"
+  },
+  "maxStudents": 2,
+  "allowMultipleEnvironmentActivations": true
+}
+2026-02-25T01:07:35.133Z [[32minfo[39m]: Access token was generated: 
+eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwidHlwIjoiSldUIn0..qac0siKPTL8PHYRldNdo0g.5Oh61trq7EPyqo7sRuN0HP3BYCKrsQtbqJb5XJtJIkpatPpS0AEWfXjcbMTd41F81Gg6tq1R_ZrSFWINcGdBTlOFDTBcNRZ5Q__LakIJ3cEvDdpkcG07yVxVCIHZs9ABgp6qOTEy3h3dYQ9_muJHd4xE1hM7TfYwnqmytvVX4kZP888vusn-OtBaYh3oO4ec2i0hUoeyFN_AsVBO6teORr4oHj9j4bgqIadjgeUUQOt7Dv31YTveIE6nfTunVppmLfiY6gYrgKrj-9__S6FFIuSEtyL3gobm0mcgikjiIAbYuCqnr595W8fh3mPfjR5-3JqkIF83b8WTmDX0j20XBQ.KcC2MutMWxynl6oy9FTkOw-uEwi-ngfAXeiYcdRrjfc
+2026-02-25T01:07:36.247Z [[32minfo[39m]: Created Training: 
+{
+  "id": "EXX1rTXbW5e1WfvL0q0kgctg2",
+  "name": "AUTO_TEST_training_mEbE8nHlsb_25.02.26_01:07:34",
+  "status": "notStarted",
+  "type": "instructorLed",
+  "accessLink": "https://webintg.il.cld.sr/Class/3iuat",
+  "passphrase": "sic parvis magna",
+  "createdBy": "experience.managment.e2e@gmail.com",
+  "createdDate": "2026-02-25T01:07:35.431Z",
+  "lastUpdatedBy": "experience.managment.e2e@gmail.com",
+  "lastUpdatedDate": "2026-02-25T01:07:36.040Z",
+  "projectId": "PR5bugMU3Zlb_5-I8rMWbv6w2",
+  "teamId": "TMpkLntpwM4UIwcbkFv3OV4A2",
+  "blueprintIds": [
+    "BPN6RyuwVXAlZuzXf55Y5_ow2"
+  ],
+  "mainInstructor": {
+    "email": "experience.managment.e2e@gmail.com"
+  },
+  "additionalInstructors": [],
+  "start": "2026-02-25T01:07:34.877Z",
+  "end": "2026-02-25T01:22:34.877Z",
+  "timeZone": "UTC",
+  "cloudshareRegionIds": [
+    "REKolD1-ab84YIxODeMGob9A2"
+  ],
+  "policyId": "POcxekPo9Xp9Om592yqIWUhA2",
+  "maxStudents": 2,
+  "registrationType": "anyStudents",
+  "accessType": "passphrase",
+  "usersEarlyAccess": {
+    "grantEarlyAccess": "forEveryone",
+    "earlyAccessTime": 120
+  },
+  "description": "Accelerate e2e description",
+  "labels": [
+    "accelerate_e2e_label"
+  ],
+  "allowMultipleEnvironmentActivations": true,
+  "sendInvitations": "instructorsAndStudents",
+  "blockFreeEmailDomains": false,
+  "customFields": [],
+  "allowParticipantsSwitchSteps": false,
+  "useCustomInvitationEmail": false
+}
+2026-02-25T01:07:36.247Z [[32minfo[39m]: Training ID is = EXX1rTXbW5e1WfvL0q0kgctg2
+2026-02-25T01:07:39.669Z [[32minfo[39m]: Log in
+2026-02-25T01:07:43.369Z [[32minfo[39m]: Go to training experience
+2026-02-25T01:07:45.033Z [[32minfo[39m]: contextHolder: waiting for new tab
+2026-02-25T01:07:48.188Z [[32minfo[39m]: Go to Editor
+2026-02-25T01:07:49.045Z [[32minfo[39m]: Add Guided Journey as left menu tab
+2026-02-25T01:08:00.654Z [[32minfo[39m]: Set Guided Journey Chapter Name for Default Chapter
+2026-02-25T01:08:01.991Z [[32minfo[39m]: Add 2 Sections To Default Chapter
+2026-02-25T01:08:02.094Z [[32minfo[39m]: Go Back to Chapters List
+2026-02-25T01:08:02.272Z [[32minfo[39m]: Add Additional Guided Journey Chapter
+2026-02-25T01:08:13.929Z [[32minfo[39m]: Set Guided Journey Chapter Name for New Chapter
+2026-02-25T01:08:14.392Z [[32minfo[39m]: Add New Guided Journey Section To New Chapter
+2026-02-25T01:08:14.505Z [[32minfo[39m]: Go Back to Chapters List
+2026-02-25T01:08:14.521Z [[32minfo[39m]: Navigate to Chapter 0
+2026-02-25T01:08:15.365Z [[32minfo[39m]: Set Guided Journey Section 0 Settings in Chapter 0
+2026-02-25T01:08:16.600Z [[32minfo[39m]: Set Guided Journey Section 1 Settings in Chapter 0
+2026-02-25T01:08:17.363Z [[32minfo[39m]: Navigate to Chapter 1
+2026-02-25T01:08:18.270Z [[32minfo[39m]: Set Guided Journey Section 0 Settings in Chapter 1
+2026-02-25T01:08:19.465Z [[32minfo[39m]: Set Guided Journey Section 1 Settings in Chapter 1
+2026-02-25T01:08:20.050Z [[32minfo[39m]: Go Back to Chapters List
+2026-02-25T01:08:29.930Z [[32minfo[39m]: Add a Checkpoint to Section 1 in Chapter 0
+2026-02-25T01:08:32.112Z [[32minfo[39m]: Add a Hint to Checkpoint Section 1 in Chapter 0
+2026-02-25T01:08:35.113Z [[32minfo[39m]: Page has loaded successfully
+2026-02-25T01:08:38.236Z [[32minfo[39m]: Save Editor With Guided Journey
+2026-02-25T01:08:38.695Z [[32minfo[39m]: Clear Storage and Refresh Page
+2026-02-25T01:08:50.049Z [[32minfo[39m]: Open Guided Journey
+2026-02-25T01:08:50.082Z [[32minfo[39m]: Navigate to Chapter 0
+2026-02-25T01:08:50.878Z [[32minfo[39m]: Open and Validate Guided Journey Section 0 in Chapter 0
+2026-02-25T01:08:51.458Z [[32minfo[39m]: Open and Validate Guided Journey Section 1 in Chapter 0
+2026-02-25T01:08:51.807Z [[32minfo[39m]: Navigate to Chapter 1
+2026-02-25T01:08:52.441Z [[32minfo[39m]: Open and Validate Guided Journey Section 0 in Chapter 1
+2026-02-25T01:08:52.970Z [[32minfo[39m]: Open and Validate Guided Journey Section 1 in Chapter 1
+2026-02-25T01:08:53.093Z [[32minfo[39m]: Go Back to Chapters List
+2026-02-25T01:08:53.130Z [[32minfo[39m]: Navigate to Chapter 0
+2026-02-25T01:08:53.859Z [[32minfo[39m]: Check Section 0 in Chapter 0 has Checkpoint Icon and Screenshot Area
+2026-02-25T01:08:55.012Z [[32minfo[39m]: Check Section 1 in Chapter 0 has Checkpoint Icon and Screenshot Area
+2026-02-25T01:08:55.262Z [[32minfo[39m]: Navigate to Chapter 1
+2026-02-25T01:08:56.017Z [[32minfo[39m]: Check Section 0 in Chapter 1 has Checkpoint Icon and Screenshot Area
+2026-02-25T01:08:56.694Z [[32minfo[39m]: Check Section 1 in Chapter 1 has Checkpoint Icon and Screenshot Area
+2026-02-25T01:08:56.938Z [[32minfo[39m]: Go Back to Chapters List
+2026-02-25T01:09:00.324Z [[32minfo[39m]: Delete First Chapter
+2026-02-25T01:09:11.858Z [[32minfo[39m]: Set Guided Journey Chapter Name for First Chapter
+2026-02-25T01:09:13.255Z [[32minfo[39m]: Set Guided Journey Section 2 Settings in Chapter 0
+2026-02-25T01:09:13.756Z [[32minfo[39m]: Add a New Section to First Chapter
+2026-02-25T01:09:14.667Z [[32minfo[39m]: Set Guided Journey Section 1 Settings in Chapter 0
+2026-02-25T01:09:22.462Z [[32minfo[39m]: Add a Checkpoint to Section 1 in Chapter 0
+2026-02-25T01:09:24.477Z [[32minfo[39m]: Add a Hint to Checkpoint Section 1 in Chapter 0
+2026-02-25T01:09:24.647Z [[32minfo[39m]: Go Back to Chapters List
+2026-02-25T01:09:24.752Z [[32minfo[39m]: Expand First Chapter
+2026-02-25T01:09:25.251Z [[32minfo[39m]: Delete First Section from First Chapter
+2026-02-25T01:09:25.398Z [[32minfo[39m]: Add New Guided Journey Chapter
+2026-02-25T01:09:26.965Z [[32minfo[39m]: Set Guided Journey Chapter Name for New Chapter
+2026-02-25T01:09:27.671Z [[32minfo[39m]: Add 2 Guided Journey Sections To New Chapter
+2026-02-25T01:09:27.803Z [[32minfo[39m]: Go Back to Chapters List
+2026-02-25T01:09:28.696Z [[32minfo[39m]: Set Guided Journey Section 0 Settings in Chapter 1
+2026-02-25T01:09:29.949Z [[32minfo[39m]: Set Guided Journey Section 1 Settings in Chapter 1
+2026-02-25T01:09:31.147Z [[32minfo[39m]: Set Guided Journey Section 2 Settings in Chapter 1
+2026-02-25T01:09:31.730Z [[32minfo[39m]: Go Back to Chapters List
+2026-02-25T01:09:33.016Z [[32minfo[39m]: Set Guided Journey Section 2 Settings in Chapter 0
+2026-02-25T01:09:48.311Z [[32minfo[39m]: Page has loaded successfully
+2026-02-25T01:09:51.447Z [[32minfo[39m]: Save Editor With Guided Journey
+2026-02-25T01:09:51.788Z [[32minfo[39m]: Clear Storage and Refresh Page
+2026-02-25T01:10:02.662Z [[32minfo[39m]: Open Guided Journey
+2026-02-25T01:10:04.280Z [[32minfo[39m]: Validate Guided Journey Chapter 0
+2026-02-25T01:10:04.842Z [[32minfo[39m]: Open and Validate Guided Journey Section 0 in Chapter 0
+2026-02-25T01:10:05.431Z [[32minfo[39m]: Open and Validate Guided Journey Section 1 in Chapter 0
+2026-02-25T01:10:06.088Z [[32minfo[39m]: Open and Validate Guided Journey Section 2 in Chapter 0
+2026-02-25T01:10:07.459Z [[32minfo[39m]: Tear down action has been started: training deletion
+Registered middlewares: RetryHandler, RedirectHandler, ParametersNameDecodingHandler, UserAgentHandler, HeadersInspectionHandler, UrlReplaceHandler, CustomFetchHandler
+Hint: To improve performance, use MiddlewareFactory.getPerformanceMiddlewares(customFetch) instead of MiddlewareFactory.getDefaultMiddlewares(customFetch)
+2026-02-25T01:10:07.648Z [[32minfo[39m]: Access token was generated: 
+eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwidHlwIjoiSldUIn0..anTrGhi9Z4SA05Fhq50LoA.VJScHh9EubolmOdtFfNve99PgMGxkrY8Vkoq4vRxLv97VtZ1QTdxvwl5zd3Ok1c6b5POf_elbnaeSXTzOZF3j1_mHi4zALv9UfgSXGkFmz7O-r6HmYaEvOiaHAT7J0pGUZOIl5e9pytIux3hu_gZYK9uB335qn5oqZXCQVf3ArHdfdeYvjqy_7IrID6lxKhJV_4QDOBobcRSGuuN32BJVtuftv8b8LfSgDbhgq0x2fQKNExkILsO6nJxJCpqPSYhTrT-x7FOFhFGagZbbeDQKbugmhgXX4u4sB2yhIEGSIh3oG7Rt5pU8nhR9Lbl1SvqTY3H1Y-4X3Z3R6adeXmW_g.cq35uzQnXO5za0MpAdoiMmqNEz2ENfrotRS-C4FRSIQ
+2026-02-25T01:10:08.554Z [[32minfo[39m]: Training Experience AUTO_TEST_training_mEbE8nHlsb_25.02.26_01:07:34 has been deleted
+
+[[ATTACHMENT|browser-new-ui-editor-guid-14b08--Editor-Guided-Journey-Test-Google-Chrome/error-context.md]]
+
+[[ATTACHMENT|browser-new-ui-editor-guid-14b08--Editor-Guided-Journey-Test-Google-Chrome/trace.zip]]
+[03:10:18]F:			 [Editor Guided Journey Test: new viewer UI › Editor Guided Journey Test] FAILURE: editor-guided-journey-new-ui.spec.ts:127:3 Editor Guided Journey Test
+[03:10:18]F:			 [Editor Guided Journey Test: new viewer UI › Editor Guided Journey Test] [Google Chrome] › browser/new-ui/editor-guided-journey-new-ui.spec.ts:127:3 › Editor Guided Journey Test: new viewer UI › Editor Guided Journey Test › Validate First Chapter 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+      114 |     await sectionSettings.waitForImageLoadingDone()
+      115 |     const areasCount = await sectionSettings.getCheckpointAreasCount()
+    > 116 |     expect(areasCount).toBe(shouldHasCheckpoint ? 1 : 0)
+          |                        ^
+      117 |
+      118 |     const failureHintCheckbox = await sectionSettings.isFailureHintCheckboxChecked()
+      119 |     expect(failureHintCheckbox).toBe(shouldHasFailureHintCheckbox ? true : false)
+        at validateCheckpoint (/home/sysadmin/BuildAgent/work/20396dbc80e602e0/src/tests/browser/new-ui/editor-guided-journey-new-ui.spec.ts:116:24)
+        at /home/sysadmin/BuildAgent/work/20396dbc80e602e0/src/tests/browser/new-ui/editor-guided-journey-new-ui.spec.ts:422:7
+        at /home/sysadmin/BuildAgent/work/20396dbc80e602e0/src/tests/browser/new-ui/editor-guided-journey-new-ui.spec.ts:412:5
+
+    Error Context: ../../test-results/browser-new-ui-editor-guid-14b08--Editor-Guided-Journey-Test-Google-Chrome/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/browser-new-ui-editor-guid-14b08--Editor-Guided-Journey-Test-Google-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/browser-new-ui-editor-guid-14b08--Editor-Guided-Journey-Test-Google-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+[03:10:19]E:	 [Step 1/3] Failed tests detected
+[03:10:28] :	 [Step 1/3] [Claude Reporter] Analysis written: /home/sysadmin/BuildAgent/work/20396dbc80e602e0/playwright-report/ai__Google_Chrome_browser_new-ui_editor-guided-journey-new-ui.spec.ts_Editor_Guided_Journey_Test__new_viewer_UI_Editor_Guided_Journey_Test.txt
+[03:10:28] :	 [Step 1/3] [Claude Reporter] All analyses complete.
+[03:10:28]i:	 [Step 1/3] Container event: {"status":"exec_die","id":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","from":"mcr.microsoft.com/playwright:v1.53.1-noble","Type":"container","Action":"exec_die","Actor":{"ID":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","Attributes":{"execID":"de8c0e89ecce6b64cc7d19d06c1e7c3009c835076edd87c92756702a6f8bd1c0","exitCode":"1","image":"mcr.microsoft.com/playwright:v1.53.1-noble","jetbrains.teamcity.buildId":"4604539","name":"peaceful_feistel","org.opencontainers.image.ref.name":"ubuntu","org.opencontainers.image.version":"24.04"}},"scope":"local","time":1771981828,"timeNano":1771981828270670427}
+[03:10:28]W:	 [Step 1/3] Process exited with code 1
+[03:10:28]E:	 [Step 1/3] Node.js: Exit code: 1
+[03:10:28]i:	 [Step 1/3] Container wrapper: killing reusable container 6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0
+[03:10:28]i:	 [Step 1/3] Container event: {"status":"kill","id":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","from":"mcr.microsoft.com/playwright:v1.53.1-noble","Type":"container","Action":"kill","Actor":{"ID":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","Attributes":{"image":"mcr.microsoft.com/playwright:v1.53.1-noble","jetbrains.teamcity.buildId":"4604539","name":"peaceful_feistel","org.opencontainers.image.ref.name":"ubuntu","org.opencontainers.image.version":"24.04","signal":"9"}},"scope":"local","time":1771981828,"timeNano":1771981828530649981}
+[03:10:28]i:	 [Step 1/3] Container event: {"status":"die","id":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","from":"mcr.microsoft.com/playwright:v1.53.1-noble","Type":"container","Action":"die","Actor":{"ID":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","Attributes":{"execDuration":"261","exitCode":"137","image":"mcr.microsoft.com/playwright:v1.53.1-noble","jetbrains.teamcity.buildId":"4604539","name":"peaceful_feistel","org.opencontainers.image.ref.name":"ubuntu","org.opencontainers.image.version":"24.04"}},"scope":"local","time":1771981828,"timeNano":1771981828839650670}
+[03:10:28]E:	 [Step 1/3] Step Node version (Node.js) failed
+[03:10:28] : Step 2/3: Allure Report (Allure Report) (5s)
+[03:10:28] :	 [Step 2/3] Search allure history information in [http://tc.cld.sr/repository/download/AutomaticTestingPlaywright_Intg_Suits_NewUiTests_EditorGuidedJourneyNewUi/.lastFinished/.teamcity/allure/history.zip?branch=main] ...
+[03:10:28] :	 [Step 2/3] Coping allure history information from [http://tc.cld.sr/repository/download/AutomaticTestingPlaywright_Intg_Suits_NewUiTests_EditorGuidedJourneyNewUi/.lastFinished/.teamcity/allure/history.zip?branch=main] ...
+[03:10:28] :	 [Step 2/3] Search allure history information in [http://tc.cld.sr/repository/downloadAll/AutomaticTestingPlaywright_Intg_Suits_NewUiTests_EditorGuidedJourneyNewUi/.lastFinished/artifacts.zip?branch=main] ...
+[03:10:28] :	 [Step 2/3] Allure history information already exists ...
+[03:10:28] :	 [Step 2/3] Program environment variables: {PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin, SHARED_ENV_USER_PASSWORD=*******, INVOCATION_ID=c595651fe18b4836a2204e86d177c87c, JRE_11=/usr/lib/jvm/java-11-openjdk-amd64, SHARED_ENV_PM_API_KEY=*******, TEAMCITY_BUILD_PROPERTIES_FILE=/home/sysadmin/BuildAgent/temp/buildTmp/teamcity.build.parameters, EMAIL_ADDRESS_ROOT=auto-root@itstructures.com, TEAMCITY_BUILDCONF_NAME=Editor: Guided Journey New UI, LANG=en_US.UTF-8, TEST_ENVIRONMENT=WEBINTG, RBAC_USERS_PASSWORD=, JRE_HOME=/usr/lib/jvm/java-11-openjdk-amd64, JOURNAL_STREAM=8:23331, API_KEY=*******, EMAIL_ADDRESS=e2e-project-manager-best@cloudshare.com, EMAIL_PASSWORD=*******, TEAMCITY_GIT_PATH=/usr/bin/git, PWD=/home/sysadmin/BuildAgent/bin, JRE_11_x64=/usr/lib/jvm/java-11-openjdk-amd64, _=/usr/bin/nohup, CHANNELS_ACM_PASSWORD=*******, EMAIL_PASSWORD_ROOT=*******, TEAMCITY_VERSION=2024.03.3 (build 156364), BUILD_VCS_NUMBER=7a37c9a9bcccf88a43b29509e9a060d5659961a1, SLACK_WEBHOOK_URL_PREPROD_DEPLOYMENT=*******, OLDPWD=/, CHANNELS_PMA_PASSWORD=*******, JRE_11_0_x64=/usr/lib/jvm/java-11-openjdk-amd64, TMPDIR=/home/sysadmin/BuildAgent/temp/buildTmp, SHARED_ENV_PM_API_ID=*******, TEAMCITY_PROJECT_NAME=New Viewer UI tests, UID=0, BUILD_NUMBER=481, TEMP=/home/sysadmin/BuildAgent/temp/buildTmp, BUILD_VCS_NUMBER_AutomaticTesting=7a37c9a9bcccf88a43b29509e9a060d5659961a1, API_ID=*******, BUILD_URL=https://tc.cloudshare.com/build/4604539, yarn_token=\*\*\*\*\*\*\*, JRE_11_0=/usr/lib/jvm/java-11-openjdk-amd64, SANITY_REGION_NAME=CloudShare / US East (Miami), TMP=/home/sysadmin/BuildAgent/temp/buildTmp, ACCELERATE_USER_PASSWORD=*******, TEAMCITY_CAPTURE_ENV="/usr/lib/jvm/java-11-openjdk-amd64/bin/java" -jar "/home/sysadmin/BuildAgent/plugins/environment-fetcher/lib/environment-fetcher-bin-2024.03-156364-jar-with-dependencies.jar", SYSTEMD_EXEC_PID=694, SHLVL=0, TEAMCITY_GIT_VERSION=2.37.2.0}
+[03:10:28] :	 [Step 2/3] Program working directory: /home/sysadmin/BuildAgent/work/20396dbc80e602e0
+[03:10:28] :	 [Step 2/3] Program path: /home/sysadmin/BuildAgent/tools/allure-2.24.1/allure-2.24.1/bin/allure
+[03:10:28] :	 [Step 2/3] Program args: [generate, /home/sysadmin/BuildAgent/work/20396dbc80e602e0/allure-results, -o, /home/sysadmin/BuildAgent/work/20396dbc80e602e0/allure-report]
+[03:10:28] :	 [Step 2/3] Starting: /home/sysadmin/BuildAgent/tools/allure-2.24.1/allure-2.24.1/bin/allure generate /home/sysadmin/BuildAgent/work/20396dbc80e602e0/allure-results -o /home/sysadmin/BuildAgent/work/20396dbc80e602e0/allure-report
+[03:10:28] :	 [Step 2/3] in directory: /home/sysadmin/BuildAgent/work/20396dbc80e602e0
+[03:10:29]i:	 [Step 2/3] Container event: {"status":"destroy","id":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","from":"mcr.microsoft.com/playwright:v1.53.1-noble","Type":"container","Action":"destroy","Actor":{"ID":"6edfd2d3a93ea73024241ccf4c26edcc62275d91934b8ea8d5fa582ced8e24a0","Attributes":{"image":"mcr.microsoft.com/playwright:v1.53.1-noble","jetbrains.teamcity.buildId":"4604539","name":"peaceful_feistel","org.opencontainers.image.ref.name":"ubuntu","org.opencontainers.image.version":"24.04"}},"scope":"local","time":1771981829,"timeNano":1771981829548605049}
+[03:10:32] :	 [Step 2/3] Report successfully generated to /home/sysadmin/BuildAgent/work/20396dbc80e602e0/allure-report
+[03:10:32] :	 [Step 2/3] Process exited with code 0
+[03:10:32] :	 [Step 2/3] Publishing artifacts
+[03:10:32] :		 [Publishing artifacts] Collecting files to publish: [/home/sysadmin/BuildAgent/work/20396dbc80e602e0/allure-report => allure-report]
+[03:10:32] :		 [Publishing artifacts] Publishing 44 files using [WebPublisher]: allure-report => allure-report
+[03:10:32] :		 [Publishing artifacts] Publishing 44 files using [ArtifactsCachePublisherImpl]: allure-report => allure-report
+[03:10:32]i:		 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[03:10:33]i:		 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[03:10:33]i:		 [Publishing artifacts] Will publish 42 artifact(s) to TeamCity node with id MAIN_SERVER
+[03:10:33] :	 [Step 2/3] Publishing artifacts
+[03:10:33] :		 [Publishing artifacts] Collecting files to publish: [/home/sysadmin/BuildAgent/temp/agentTmp/history.zip => .teamcity/allure/]
+[03:10:33] :		 [Publishing artifacts] Publishing 1 file using [WebPublisher]: /home/sysadmin/BuildAgent/temp/agentTmp/history.zip => .teamcity/allure
+[03:10:33] :		 [Publishing artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]: /home/sysadmin/BuildAgent/temp/agentTmp/history.zip => .teamcity/allure
+[03:10:33]i:		 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[03:10:33] :	 [Step 2/3] Publishing artifacts
+[03:10:33] :		 [Publishing artifacts] Collecting files to publish: [/home/sysadmin/BuildAgent/temp/agentTmp/summary.json=>.teamcity/allure/]
+[03:10:33] :		 [Publishing artifacts] Publishing 1 file using [WebPublisher]: /home/sysadmin/BuildAgent/temp/agentTmp/summary.json => .teamcity/allure
+[03:10:33] :		 [Publishing artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]: /home/sysadmin/BuildAgent/temp/agentTmp/summary.json => .teamcity/allure
+[03:10:33]i:		 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[03:10:33] : Step 3/3: Generate AI Report Index (Command Line)
+[03:10:33]i:	 [Step 3/3] Content of /home/sysadmin/BuildAgent/temp/agentTmp/custom_script9945815670241375866 file: 
+REPORT_DIR="playwright-report" 
+cd "$REPORT_DIR" 
+echo "<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>AI Analysis Results</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    padding: 20px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #444;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+  }
+  h4 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    background: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    border-radius: 4px;
+  }
+  hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+</style>
+</head>
+<body>
+<h3>AI Analysis Results</h3>" > index.html
+for f in ai_*.txt; do 
+echo "<h4>$f</h4>" >> index.html 
+echo "<pre>" >> index.html 
+cat "$f" >> index.html 
+echo "</pre><hr>" >> index.html 
+done
+
+[03:10:34] :	 [Step 3/3] Starting: /home/sysadmin/BuildAgent/temp/agentTmp/custom_script9945815670241375866 
+[03:10:34] :	 [Step 3/3] in directory: /home/sysadmin/BuildAgent/work/20396dbc80e602e0
+[03:10:34] :	 [Step 3/3] Process exited with code 0
+[03:10:34] : Ant JUnit report watcher
+[03:10:34] :	 [Ant JUnit report watcher] 1 report found for paths:
+[03:10:34] :	 [Ant JUnit report watcher] /home/sysadmin/BuildAgent/work/20396dbc80e602e0/test-results/results.xml
+[03:10:34] :	 [Ant JUnit report watcher] Successfully parsed
+[03:10:34] :		 [Successfully parsed] 1 report
+[03:10:34] :		 [Successfully parsed] test-results/results.xml
+[03:10:35] : Publishing artifacts
+[03:10:35] :	 [Publishing artifacts] Collecting files to publish: [/home/sysadmin/BuildAgent/temp/buildTmp/.teamcity/docker/build_481/events.json => .teamcity/docker/]
+[03:10:35] :	 [Publishing artifacts] Publishing 1 file using [WebPublisher]: /home/sysadmin/BuildAgent/temp/buildTmp/.teamcity/docker/build_481/events.json => .teamcity/docker
+[03:10:35] :	 [Publishing artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]: /home/sysadmin/BuildAgent/temp/buildTmp/.teamcity/docker/build_481/events.json => .teamcity/docker
+[03:10:35]i:	 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[03:10:35]i: Docker wrapper: setting permissions for '/home/sysadmin/BuildAgent/temp/buildTmp' and '/home/sysadmin/BuildAgent/work/20396dbc80e602e0' to 755
+[03:10:35] : Publishing internal artifacts
+[03:10:35] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[03:10:35] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[03:10:35]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[03:10:35] : Publishing internal artifacts
+[03:10:35] : Publishing artifacts
+[03:10:35] :	 [Publishing artifacts] Collecting files to publish: [playwright-report/** => ai-reports]
+[03:10:35] :	 [Publishing artifacts] Publishing 3 files using [WebPublisher]: playwright-report/** => ai-reports
+[03:10:35] :	 [Publishing artifacts] Publishing 3 files using [ArtifactsCachePublisherImpl]: playwright-report/** => ai-reports
+[03:10:35]i:	 [Publishing artifacts] Will publish 3 artifact(s) to TeamCity node with id MAIN_SERVER
+[03:10:35]E: 1 failed test detected
+[03:10:35] : Build finished

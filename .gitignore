@@ -1,7 +1,8 @@
 .idea/
-.env
+ExecutiveDashboard_Agent1/.env
 __pycache__/
 venv/
 *.pyc
 .DS_Store
 .planning/
+Logs/
