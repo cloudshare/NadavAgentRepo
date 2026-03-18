@@ -8,7 +8,9 @@ import requests
 from flask import Flask, jsonify, send_from_directory, request
 from dotenv import load_dotenv
 
-load_dotenv('.env_SharedEnv')
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env_SharedEnv'), override=True)
+if (os.getenv("JIRA_EMAIL") is None or os.getenv("JIRA_API_TOKEN") is None or os.getenv("JIRA_BASE_URL") is None):
+    raise ValueError("Missing required Jira configuration in environment variables")
 
 app = Flask(__name__, static_folder="static")
 
